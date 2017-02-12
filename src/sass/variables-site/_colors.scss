@@ -1,0 +1,96 @@
+// Color Scheme:
+// https://color.adobe.com/My-Portfolio-color-theme-2309110/?showPublished=true
+
+// WHITE
+$white1: 	#FFFFFF;
+$white2: 	#F2F2F2;
+$white3:	#ecf0f1;
+
+// GRAY
+$gray1: 	#B7B7B7;
+$gray2: 	#818286;
+$gray3: 	#404040;
+$gray4:		#a8a8a8;
+
+
+// GREEN
+$green1:	#91C46C;
+$green2: 	#77C770;
+$green3:	#427A1B;
+$green4: 	#3caf2b;
+
+// TEAL
+$teal1: 	#30997a;
+$teal2:		#287D7D;
+
+// DARK BLUE
+$darkblue1: 	#212a34;
+$darkblue2:		#1C344C;
+
+
+// BLACK
+$black1: #1e2024;
+$black2: #161616;
+$black3: #363636;
+
+// RED
+$red1: #ff7069;
+
+// BLUE
+$blue1: #4fb8d6;
+$blue2: #3d8bb1;
+$blue3: #32749d;
+
+
+// ORANGE
+$orange1: 	#da6f2b;
+
+// PURPLE
+$purple1: 	#6a478f;
+
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: $black1;
+$color__link-visited: $black1;
+$color__link-hover: $darkblue1;
+$color__text-main: $black1;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+$nav__background: $darkblue1;
+
+
+//Icon Colors
+$color_post: $orange1;
+$color_projects: $blue3;
+$color_photography: $purple1;
+$color_media: $teal1;
+
+
+//Index Page Colors
+$color_link_black: $black1;
+$color_link_gray: $gray3;
+
+
+
+
+//===========================
+// POST AND PAGES
+//===========================
+// $single-meta-color: $red-reg;
+$comment-meta-color: $red1;
+// $post-link-color: $darkblue-reg;

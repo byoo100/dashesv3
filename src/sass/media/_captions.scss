@@ -1,0 +1,49 @@
+.wp-caption {
+	font-style: italic;
+	max-width: 100%;
+
+	.aligncenter {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
+	&.alignright,
+	&.alignleft {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+	}
+
+	em {
+		font-style: normal; /* Inverse emphasis because of all italics */
+	}
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.wp-caption-text {
+	display: block;
+	position: relative;
+	margin: 1em 0 1em 2em;
+	padding: 0 1em .5em;
+	font-size: 90%;
+	color: #333;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #c3c3c3;
+
+
+	&::before {
+		position: absolute;
+		top: -3px;
+		left: -1.4em;
+		display: block;
+		font-family: $font-awesome;
+		font-style: normal;
+		color: #808080;
+		content: "\f148";
+		transform: rotate(90deg);
+	}
+}

@@ -1,0 +1,113 @@
+.content-area{
+	
+	.title-banner{
+		margin-bottom: 1em;
+
+		.title-wrapper{
+			max-width: 800px;
+			margin-bottom: 1em;
+
+			.title-icon{
+				display: table-cell;
+				font-size: 1.5em;
+			    vertical-align: top;
+
+				&:before{
+					display: block;
+					padding: 0.4em;
+					margin-right: 0.4em;
+					color: #fff;
+					border-radius: 50%;
+				}
+
+				&.fa-book:before { background-color: $color_post; }
+				&.fa-code:before { background-color: $color_projects; }
+				&.fa-camera:before { background-color: $color_photography; }
+				&.fa-video-camera:before { background-color: $color_media; }
+			}
+
+			.title-text{
+				display: table-cell;
+				font-size: 2em;
+				font-weight: 700;
+			} //title-text
+		} //title-wrapper
+
+		.post-meta{
+			font-size: 0.9em;
+			padding: 1em 0;
+			border: solid #e0e0e0;
+			border-width: 1px 0;
+
+			.byline,
+			.posted-on{
+				display: table-cell;
+				padding-left: 0.5em;
+			}
+		}
+	} //title-banner
+
+
+	.featured{
+		margin-bottom: 1em;
+
+		&.left{ 
+			@include span(12 no-gutters); 
+			@media screen and (min-width: $tablet-width ){ @include span(9); }
+		}
+
+		&.centered{ 
+			width: span(12 no-gutters);
+			margin-right: auto;
+			margin-left: auto;
+
+			@media screen and (min-width: $tablet-width ){ width: span(9); }
+		}
+	} //featured
+
+	.sidebar{
+		@include span(12 no-gutters);
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #e0e0e0;
+
+		@media screen and (min-width: $tablet-width ){ @include span(last 3); }
+
+		.side-content{
+			display: inline-block;
+			margin-right: 1em;
+
+			&:last-child{ margin-right: 0; }
+
+			@media screen and (min-width: $tablet-width ){ display: block; margin-right: 0; margin-bottom: 1em; }
+
+			.side-title{ 
+				display: block; 
+				font-size: 1.25em; 
+				font-weight: 700; 
+			}
+			.side-text{ 
+				display: block; 
+				font-size: 0.9em;
+				overflow-y: auto;
+				p{ margin: 0; }
+			}
+		}
+
+
+	}
+
+	.post-content{
+		&.left{ 
+			@include span(12); 
+			@media screen and (min-width: $tablet-width ){ @include span(9); }
+		}
+
+		&.centered{ 
+			width: span(12 no-gutters); 
+			margin: 0 auto; 
+
+			@media screen and (min-width: $tablet-width ){ width: span(9); }
+		}
+	}
+
+} //content-area

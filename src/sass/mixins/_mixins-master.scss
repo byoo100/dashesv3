@@ -1,0 +1,37 @@
+@import "mixins-page";
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content:'';
+    display: table;
+  } /*before, after*/
+
+  &:after {
+    clear: both;
+  } //after
+} //clearfix
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+@mixin box-shadow( $X, $Y, $F) {
+  box-shadow: $X $Y $F rgba(100, 100, 100, .6);
+}

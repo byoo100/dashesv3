@@ -1,0 +1,144 @@
+.comments-area {
+	margin: 0 auto;
+	padding: 1em 1.5em;
+	font-size: 0.9em;
+	background-color: #fff;
+
+	@media screen and (min-width: $mobile-width) {
+		font-size: 0.9em;
+	}
+
+	@media screen and (min-width: $tablet-width){
+	    max-width: 50rem;
+	    padding: 1em 1.5em;
+	    @include box-shadow(.5px, .5px, 2px);
+	}
+
+	article {
+		box-shadow: none !important;
+	}
+
+
+	.comments-title {
+		margin-bottom: 2em;
+		font-size: 1.6em;
+		text-align: center;
+	}
+
+	.comment-list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+
+		ol {
+			list-style-type: none;
+		}
+	}
+
+	.comment-body {
+		border-bottom: 1px solid #c3c3c3;
+		margin-bottom: 2em;
+	}
+
+
+	.comment-meta {
+		position: relative;
+		margin-left: 60px;
+		font-style: italic;
+
+		@media screen and (min-width: $mobile-width) {
+			margin-left: 90px;
+		}
+
+		.comment-author {
+			font-size: 1.1em;
+			line-height: 1.3em;
+
+			a{
+				color: $comment-meta-color;
+			}
+			
+		}
+
+		.says {
+			font-size: 80%;
+		}
+
+		.avatar {
+			position: absolute;
+			top: -5px;
+			left: -60px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+
+		}
+
+		.comment-metadata {
+		    margin-top: .2em;
+			padding-bottom: .5em;
+			font-size: .8em;
+			line-height: 1em;
+
+			a {
+				color: #808080;
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	} /*.coment-meta*/
+} /* .comments-area*/
+
+
+
+.children {
+	margin-left: 1em;
+	padding-left: 0;
+
+	@media screen and (min-width: $mobile-width) {
+		margin-left: 3em;
+	}
+}
+
+.comment-content {
+	@media screen and (min-width: $mobile-width) {
+		margin-left: 45px;
+	}
+
+	@media screen and (min-width: $tablet-width) {
+		margin-left: 90px;
+	}
+}
+
+
+.reply {
+	margin-bottom: 1.5em;
+	text-align: right;
+
+	a {
+		display: inline-block;
+		padding: .5em 1.4em;
+		font-family: "Fira Sans", sans-serif;
+		font-size: 85%;
+		color: #333;
+		line-height: 1.3em;
+		text-decoration: none;
+		border: 1px solid #c3c3c3;
+
+		&:hover,
+		&:focus {
+			background: #000;
+			color: #fff;
+			border-color: #000;
+		}
+	}
+}
+
+

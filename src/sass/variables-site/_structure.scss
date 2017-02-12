@@ -1,0 +1,34 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+);
+
+
+$mobileHeight: 46px;
+$mobileWidth: 46px;
+$tabletHeight: 64px;
+$tabletWidth: 64px;
+
+$desktopHeight: 5em;
+
+$mobile-cutoff: 31.25rem; //500px
+$tablet-cutoff: 50rem; ///800px
+$desktop-cutoff: 75em; //1200px
+
+
+
+$mobile-width: 37.5rem; //600px
+$tablet-width: 62.5rem; //1000px
+$desktop-width: 87.5rem; //1400px
+
+$container-small: 400px;
+$container-medium: 630px;
+$container-large: 960px;
+$container-xlarge: 1290px;

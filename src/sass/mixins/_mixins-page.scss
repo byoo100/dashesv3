@@ -1,0 +1,109 @@
+
+@mixin vh-fix($vh, $diff) {
+  @media (max-device-aspect-ratio: 3/4) {
+    height: calc(100vw * (1.333 * #{$vh} / 100) - #{$diff});
+  }
+  @media (max-device-aspect-ratio: 2/3) {
+    height: calc(100vw * (1.5 * #{$vh} / 100) - #{$diff});
+  }
+  @media (max-device-aspect-ratio: 10/16) {
+    height: calc(100vw * (1.6 * #{$vh} / 100) - #{$diff});
+  }
+  @media (max-device-aspect-ratio: 9/16) {
+    height: calc(100vw * (1.77778 * #{$vh} / 100) - #{$diff});
+  }
+}
+
+/*maintain aspect ratio*/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+@mixin flexbox() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-flow($values) {
+  -webkit-flex-flow: $values;
+      -ms-flex-flow: $values;
+          flex-flow: $values;
+}
+
+@mixin justify-content($val) {
+  -webkit-justify-content: $val;
+            -ms-flex-pack: $val;
+          justify-content: $val;
+}
+
+@mixin align-items($val) {
+  -webkit-align-items: $val;
+       -ms-flex-align: $val;
+          align-items: $val;
+}
+
+@mixin align-content($val) {
+  -webkit-align-content: $val;
+     -ms-flex-line-pack: $val;
+          align-content: $val;
+}
+
+
+
+@mixin order($val) {     
+  -ms-flex-order: $val;     
+   -webkit-order: $val;  
+           order: $val;
+}
+
+@mixin flex($values) {
+  -webkit-flex:  $values;
+      -ms-flex:  $values;
+          flex:  $values;
+}
+
+@mixin align-self($val){
+   -webkit-align-self: $val;
+  -ms-flex-item-align: $val;
+   -ms-grid-row-align: $val;
+           align-self: $val;
+}
+
+
+
+@mixin outline-color(){
+  box-shadow: 0 3px 3px $black1;
+  &.border-post { outline: 0.4em solid $color_post; }
+  &.border-projects { outline: 0.4em solid $color_projects; }
+  &.border-photography { outline: 0.4em solid $color_photography; }
+  &.border-media { outline: 0.4em solid $color_media; }
+}
+
+@mixin post-link-color(){
+  &.color-post > a { color: $color_post; }
+  &.color-projects > a { color: $color_projects; }
+  &.color-photography > a { color: $color_photography; }
+  &.color-media > a { color: $color_media; }
+}
+
+@mixin post-type-color(){
+  &.color-post { color: $color_post; }
+  &.color-projects { color: $color_projects; }
+  &.color-photography { color: $color_photography; }
+  &.color-media { color: $color_media; }
+}

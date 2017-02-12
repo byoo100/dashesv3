@@ -1,0 +1,200 @@
+
+//WEB SECTION
+.web-section{
+	margin-bottom: 1em;
+
+
+	ul.web-icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+
+		li{
+			flex: 0 0 33%;
+			margin-bottom: 1em;
+			text-align: center;
+			list-style: none;
+
+			@media screen and (min-width: $tablet-width){ flex: 0 0 25%; }
+			@media screen and (min-width: $desktop-width){ flex: 0 0 16%; }
+			
+			.web{
+				display: block;
+				background-image: url('images/about/brian-icons-compressed.png');
+				background-repeat: no-repeat;
+				background-size: 200px;
+				width:50px;
+				height:50px;
+				margin: 0 auto;
+
+				&.web-gulp{ 		background-position: 0 0; }
+				&.web-breakpoint{ 	background-position: 0 -50px; }
+				&.web-wordpress{ 	background-position: 0 -100px; }
+				&.web-sublime{ 		background-position: 0 -150px; }
+				&.web-sass{ 		background-position: -50px 0; }
+				&.web-github{ 		background-position: -50px -50px; }
+				&.web-underscore{ 	background-position: -50px -100px; }
+				&.web-susy{ 		background-position: -100px 0; }
+				&.web-gitbash{ 		background-position: -100px -50px; }
+				&.web-acf{ 			background-position: -100px -100px; }
+				&.web-compass{ 		background-position: -150px 0; }
+				&.web-mamp{ 		background-position: -150px -50px; }
+				&.web-swiper{ 		background-position: -150px -100px; }
+
+				@media screen and (min-width: $mobile-width){ 
+					background-size: 400px;
+					width:100px; 
+					height:100px; 
+					
+					&.web-gulp{ 		background-position: 0 0; }
+					&.web-breakpoint{ 	background-position: 0 -100px; }
+					&.web-wordpress{ 	background-position: 0 -200px; }
+					&.web-sublime{ 		background-position: 0 -300px; }
+					&.web-sass{ 		background-position: -100px 0; }
+					&.web-github{ 		background-position: -100px -100px; }
+					&.web-underscore{ 	background-position: -100px -200px; }
+					&.web-susy{ 		background-position: -200px 0; }
+					&.web-gitbash{ 		background-position: -200px -100px; }
+					&.web-acf{ 			background-position: -200px -200px; }
+					&.web-compass{ 		background-position: -300px 0; }
+					&.web-mamp{ 		background-position: -300px -100px; }
+					&.web-swiper{ 		background-position: -300px -200px; }
+				}
+			} //web
+
+			.text{
+				display: inline-block;
+				text-align: center;
+				width: 100px;
+			}
+		} //li
+	} //ul.web-icons
+} //web-section
+
+
+//THUMB ZONE
+.thumb-zone{
+		display: block;
+		position: relative;
+		margin-bottom: 1em;
+
+		.thumb-image,
+		.thumb-text{
+			display: table-cell;
+			position: relative;
+			vertical-align: middle;
+		}
+
+		.thumb-image{ width: 40%; }
+		.thumb-text{ width: 60%; }
+
+		.thumb-title{
+			font-size: 1.25em;
+			@media screen and (min-width: $mobile-width){ font-size: 1.8em; }
+		} //thumb-title
+} //thumb-zone
+
+
+//MISCELLANEOUS
+.miscellaneous{
+	@include clearfix();
+	margin: 0 calc((-100vw + #{span(12 no-gutters)}) / 2);
+	padding: 1.5em 0;
+	background-color: $darkblue2;
+
+	.misc-wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		max-width: 1600px;
+		margin: 0 auto;
+
+		.programs,
+		.cameras,
+		.extralinks{
+			display: flex;
+			justify-content: center;
+			flex: 0 0 100%;
+		    padding: 1em 0;
+			text-align: center;
+			@media screen and (min-width: $tablet-width){ text-align: left; }
+
+			@media screen and (min-width: $mobile-width){ flex: 1 1 33%; }
+
+			.misc-content{
+				max-width: 240px;
+				padding: 0 1em;
+				position: relative;
+
+				.misc-title{ 
+					display: inline; 
+					position: relative;
+					font-size: 1.6em; 
+					line-height: 1.15em; 
+					font-weight: 700; 
+					margin: 0 0 0.5em 1.25em; 
+					color: $white1;  
+					text-shadow: 3px 3px 2px $black2; 
+
+					@media screen and (min-width: $tablet-width){ display: inline-block;  }
+
+					.misc-icon{ 
+						display: inline-block;
+						position: absolute;
+						left: -1.25em;
+						color: darken($green2, 5%);
+					}
+				}
+
+				.misc-text{ font-size: 0.9em; line-height: 1.25em; margin-bottom: 1em; color: $gray1; }
+
+				ul{
+					margin: 0;
+					padding: 0;
+					color: $white3;
+					list-style: none;
+
+					a { color: $white3; text-decoration: none; &:hover{ text-decoration: underline; }}
+				} // ul
+			} //list-content
+		}
+
+		.programs{
+			ul{
+				@include clearfix();
+				display: block;
+				max-width: 200px;
+				margin: 0 auto;
+
+				li{
+					@include span(1 of 3 split);
+					padding-bottom: gutters(4);
+
+					.adobe{
+						display: block;
+						background-image: url(images/about/adobe-compressed.png);
+						background-size: 150px;
+						width: 50px;
+						height: 50px;
+
+						&.photoshop{ 		background-position: 0 0; }
+						&.lightroom{ 		background-position: -50px 0; }
+						&.illustrator{ 		background-position: -100px 0; }
+						&.premiere{ 		background-position: 0 -50px; }
+						&.after-effects{ 	background-position: -50px -50px; }
+						&.audition{ 		background-position: -100px -50px; }		
+					} //adobe
+				} //li
+			} //ul
+		} //programs
+
+		@media screen and (min-width: $mobile-width){ 
+			flex-wrap: nowrap;
+			.programs, .cameras, .extralinks{ flex: 1 1 33%;  }
+		}
+	} //misc-wrapper
+} //miscellaneous
+
+
