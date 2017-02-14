@@ -23,17 +23,15 @@ get_header(); ?>
 					<h2>This site was made with</h2>
 					<ul class="web-icons">
 				        <li><span class="web web-wordpress"></span><span class="text">Wordpress</span></li>
+				        <li><span class="web web-webpack"></span><span class="text">Webpack</span></li>
+				        <li><span class="web web-mamp"></span><span class="text">Mamp / Wamp</span></li>
 				        <li><span class="web web-underscore"></span><span class="text">Underscore</span></li>
-					 	<li><span class="web web-mamp"></span><span class="text">Mamp / Wamp</span></li>
 				        <li><span class="web web-acf"></span><span class="text">ACF</span></li>
-					 	<li><span class="web web-github"></span><span class="text">Github</span></li>
-					 	<li><span class="web web-gulp"></span><span class="text">Gulp</span></li>
 					 	<li><span class="web web-sass"></span><span class="text">Sass</span></li>
 					 	<li><span class="web web-susy"></span><span class="text">Susy</span></li>
-					 	<li><span class="web web-compass"></span><span class="text">Compass</span></li>
-					 	<li><span class="web web-breakpoint"></span><span class="text">Breakpoint</span></li>
 					 	<li><span class="web web-sublime"></span><span class="text">Sublime Text</span></li>
 					 	<li><span class="web web-swiper"></span><span class="text">SwiperJS</span></li>
+					 	<li><span class="web web-github"></span><span class="text">Github</span></li>
 					</ul>
 				</section>
 
@@ -45,7 +43,7 @@ get_header(); ?>
 					</div>
 	
 					<div class="thumb-image">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/images/about/thumb-zone-compressed.png"></img>
+						<img src="<?php echo get_stylesheet_directory_uri();?>/src/images/about/thumb-zone-compressed.png"></img>
 					</div>
 				</section>
 

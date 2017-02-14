@@ -25,7 +25,7 @@ module.exports = {
         test:/\.scss$/,
         loader:ExtractTextPlugin.extract({ 
           fallback: 'style-loader',
-          use: 'css-loader!sass-loader',
+          use: 'css-loader!postcss-loader!sass-loader',
         })
       },
       {
@@ -35,10 +35,14 @@ module.exports = {
           use: 'css-loader',
         })
       },
-      { 
-        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, 
-        loader: require.resolve("file-loader") + "?name=../[path][name].[ext]"
-      }
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+
     ]
   },
   plugins: debug ? [

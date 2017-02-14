@@ -20,7 +20,7 @@
 
         <div class="mobile-menubar <?php echo $border ?>">
             <div class="mobile-menubar-logo">
-                <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/images/brian-logo-optimised.svg"></object>
+                <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
             </div>
 
             <div class="mobile-btn-open"></div><!-- Open Button -->
@@ -34,7 +34,7 @@
                 <div class="mobile-btn-close"></div><!-- Close Button -->
 
                 <div class="mobile-menulist-logo">
-                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/images/brian-logo-optimised.svg"></object>
+                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
                 </div>
             </div>
             
@@ -61,7 +61,7 @@
         <div class="desktop-menubar">
             <div class="desktop-logo">
                 <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/images/brian-logo-optimised.svg"></object>
+                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
                 </a>
             </div><!-- .desktop-icon -->
 
