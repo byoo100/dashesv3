@@ -28,7 +28,7 @@
 
 
 
-        <div class="mobile-menulist left">
+        <div class="mobile-content left">
 
             <div class="mobile-header">
                 <div class="mobile-btn-close"></div><!-- Close Button -->
@@ -40,8 +40,7 @@
             
             <?php wp_nav_menu( array( 
                 'theme_location' => 'primary', 
-                'container' => 'div',
-                'container_class' => 'mobile-content',
+                'menu_class' => 'mobile-list',
                 'link_before' => '<span class=icon>',
                 'link_after' => '</span>'
             ) ); ?>
@@ -49,7 +48,7 @@
             <?php wp_nav_menu( array( 
                 'theme_location' => 'social', 
                 'container' => 'div',
-                'container_class' => 'social-content',
+                'container_id' => 'social-list',
                 'link_before' => '<span class=screen-reader-text>',
                 'link_after' => '</span>'
             ) ); ?>
@@ -70,7 +69,7 @@
                 <?php wp_nav_menu( array( 
                     'theme_location' => 'primary', 
                     'container' => 'none',
-                    'menu_class' => 'desktop-menulist'
+                    'menu_class' => 'desktop-list'
                 ) ); ?>
 
                 <?php wp_nav_menu( array( 

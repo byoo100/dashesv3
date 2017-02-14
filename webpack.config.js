@@ -41,8 +41,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
+  plugins: debug ? [
     new ExtractTextPlugin("../../style.css"),
+  ] : [
+    new ExtractTextPlugin("../../style.css"),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ]
 }
 
