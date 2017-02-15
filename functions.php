@@ -149,6 +149,19 @@ function dashesv3_scripts() {
 		'query_vars' => json_encode( $wp_query->query )
 	));
 
+	//Make the Colorbox text translation-ready
+    $current = 'current';
+    $total = 'total';
+    wp_localize_script( 'dashesv3-bundle', 'dashesv3_script_vars', array(
+        'current'   => sprintf(__( 'image {%1$s} of {%2$s}', 'dashesv3'), $current, $total ),
+        'previous'  =>  __( 'previous', 'dashesv3' ),
+        'next'      =>  __( 'next', 'dashesv3' ),
+        'close'     =>  __( 'close', 'dashesv3' ),
+        'xhrError'  =>  __( 'This content failed to load.', 'dashesv3' ),
+        'imgError'  =>  __( 'This image failed to load.', 'dashesv3' )
+      ) 
+    );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

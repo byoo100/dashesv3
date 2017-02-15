@@ -1,12 +1,17 @@
 
 require('./sass/style.scss');
+require('./swiper/swiper.css');
+require('./colorbox/colorbox.css');
 
 
-require('./css/swiper.css');
 
 require('./js/navigation.js');
-require('./js/swiper.js');
-require('./js/swiper-script.js');
 require('./js/ajax-pagination.js');
 
-require('./js/skip-link-focus-fix.js');
+require('./swiper/swiper.js');
+require('./swiper/swiper-script.js');
+
+require('./colorbox/jquery.colorbox-min.js');
+require('./colorbox/lightbox.js');
+
+require('./js/imported/skip-link-focus-fix.js');
