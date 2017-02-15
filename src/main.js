@@ -14,4 +14,4 @@ require('./swiper/swiper-script.js');
 require('./colorbox/jquery.colorbox-min.js');
 require('./colorbox/lightbox.js');
 
-require('./js/imported/skip-link-focus-fix.js');
+require('./js/skip-link-focus-fix.js');
