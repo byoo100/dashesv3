@@ -20,7 +20,8 @@ get_header(); ?>
 			<section class="post-content centered">
 				
 				<section class="web-section">
-					<h2>This site was made with</h2>
+					<h2>This site</h2>
+					<p>was made with</p>
 					<ul class="web-icons">
 				        <li><span class="web web-wordpress"></span><span class="text">Wordpress</span></li>
 				        <li><span class="web web-webpack"></span><span class="text">Webpack</span></li>

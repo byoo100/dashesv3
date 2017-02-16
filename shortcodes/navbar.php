@@ -74,8 +74,8 @@
 
                 <?php wp_nav_menu( array( 
                     'theme_location' => 'social', 
-                    'container' => 'none',
-                    'menu_id' => 'social-list',
+                    'container' => 'div',
+                    'container_id' => 'social-list',
                     'link_before' => '<span class=screen-reader-text>',
                     'link_after' => '</span>'
                 ) ); ?>

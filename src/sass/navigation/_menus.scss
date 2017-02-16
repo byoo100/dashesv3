@@ -44,12 +44,12 @@
 				position: relative;
 				font-size: 18px;
 				font-size: 1.125rem;
-				padding: 0.7em 1em;
+				padding: 0 1em;
 				letter-spacing: 1px;
-				color: $gray1;
+				color: $white1;
 				text-decoration: none;
 
-				&:hover{ color: $white1; }
+				&:hover{ opacity: 0.6; }
 
 				.icon:before{
 					display: inline-block;
@@ -60,17 +60,15 @@
 				}
 			} //li > a
 
-			&.current_page_item > a {
-				color: $white1;
-			} //li.current_page_item
+			&.current_page_item > a { opacity: 0.6; } //li.current_page_item
 
 			&.menu-item-has-children,
 			&.page_item_has_children{
 
 				.dropdown-toggle{
 					position: absolute;
-					height: 27px;
-					width: 27px;
+					height: 30px;
+					width: 30px;
 					top: 12px;
 					right: 6px;
 					-webkit-box-sizing: content-box;
@@ -86,13 +84,18 @@
 
 					&:after {
 						content: "\f078";
-						font-size: 14px;
-						line-height: 27px;
+						font-size: 16px;
 						position: relative;
 						top: 0;
-						left: 1px;
-						width: 27px;
+						width: 30px;
 					}
+
+					&:hover{
+						color: #000;
+						background-color: #fff;
+					}
+
+					&:focus{ outline: none; }
 				}
 
 				ul.sub-menu{
@@ -105,6 +108,40 @@
 			}
 		} //li
 	} //mobile-list
+
+
+	//GENERAL STYLE OF SOCIAL MENU
+	#social-list{
+		ul{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			li{
+				display: inline-block;
+
+				a{
+					display: inline-block;
+					position: relative;
+					margin-right: 1.25em;
+					color: $white1;
+					text-decoration: none;
+
+					&:hover{
+						opacity: 0.6;
+					}
+
+					&:before{
+						display: inline-block;
+						font-family: 'fontawesome';
+						content: '';
+						font-size: 1.75em;
+						
+					}
+				}
+			} //list-style
+		} //ul
+	} //social-list
 	
 
 	// MENU BAR
@@ -248,6 +285,7 @@
 		ul.mobile-list{
 			li{
 				a{
+					line-height: 3em;
 					border-bottom: 1px solid lighten($darkblue1, 10%);
 
 					.icon:before{
@@ -261,6 +299,8 @@
 
 				&.menu-item-has-children,
 				&.page_item_has_children{
+
+					.dropdown-toggle{ right: 1.5em; }
 
 					ul.sub-menu{
 						li{ 
@@ -280,33 +320,6 @@
 		#social-list{
 			ul{
 				margin: 1em 0;
-				padding: 0;
-				text-align: center;
-
-				li{
-					display: inline-block;
-					a{
-						display: inline-block;
-						position: relative;
-						font-size: 18px;
-						font-size: 1.125rem;
-						margin-right: 1.25em;
-						color: #d0d0d0;
-						text-decoration: none;
-
-						&:hover{
-							color: $white1;
-						}
-
-						&:before{
-							display: inline-block;
-							font-family: 'fontawesome';
-							content: '';
-							font-size: 1.75em;
-							
-						}
-					}
-				} //list-style
 			} //ul
 		} //social-list
 
@@ -340,10 +353,10 @@
 		height: $desktopHeight;
 		width: 80%;
 		margin: 0 auto;
-		padding: 1em 0;
 
 		.desktop-logo{
 			flex: 0 0 20%;
+			padding: 0.8em 0;
 			
 			a{
 				display: inline-block;
@@ -367,13 +380,18 @@
 				align-items: center;
 
 				li{
+					a{ line-height: $desktopHeight; }
+
 					&.menu-item-has-children,
 					&.page_item_has_children{
 
-						& > a{ padding-right: 2.3em; }
+						& > a{ padding-right: 2.6em; }
+
+						.dropdown-toggle{ top: calc(#{$desktopHeight} / 3 - 1px); }
 
 						ul.sub-menu{
 							position: absolute;
+							a { line-height: 4rem; }
 						} //li > ul.sub-menu
 					}
 				} //li
@@ -381,33 +399,14 @@
 
 			//SOCIAL CONTENT
 			#social-list{
-				margin: 0;
-				padding: 0;
-				text-align: center;
 
-				li{
-					display: inline-block;
-					a{
-						display: inline-block;
-						position: relative;
-						color: #d0d0d0;
-						text-decoration: none;
-
-						&:hover{
-							color: $white1;
-						}
-
-						&:before{
-							display: inline-block;
-							font-family: 'fontawesome';
-							content: '';
-							font-size: 1.5em;
-						}
-					}
-				} //li
+				a{ line-height: $desktopHeight; }
+				
 			} //social-content
 		} //grid-container
 	} //nav-desktop-menubar
+
+
 
 
 	@media screen and (min-width: $tablet-width){
