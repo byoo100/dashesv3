@@ -106,7 +106,7 @@
 #post-content-switcher{
 	@include clearfix();
 	position: relative;
-	margin-bottom: 1em;
+	margin: 0 -0.5em 1em;
 
 	#post-content-anchor{
 		position: relative;
@@ -116,16 +116,16 @@
 	}
 
 	.post-content-list{
-		@include span(12);
+		@include span(12 no-gutters);
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		border-bottom: 1px solid #eee;
 
 		.post-content-item{
-			@include span(3 no-gutters);
+			@include span(3 of 12 0);
 			max-width: 160px;
-			display: inline-block;
+			display: block;
 			text-align: center;
 			
 			.post-content-link{
@@ -172,6 +172,7 @@
 		border: 1px solid #e0e0e0;
 		border-radius: 2%;
 		overflow: hidden;
+		padding: 0 0.5em;
 
 		@media screen and (min-width: $mobile-width) and (max-width: $tablet-width) { -webkit-box-flex: 0; -ms-flex: 0 0 48.62%; flex: 0 0 48.62%; max-width: 48.62%; margin-right: 2.76%; margin-left: 0; &:nth-child(2n){ margin-right: 0; } }
 		@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) { -webkit-box-flex: 0; -ms-flex: 0 0 31.25%; flex: 0 0 31.25%; max-width: 31.25%; margin-right: 3.125%; margin-left: 0; &:nth-child(3n){ margin-right: 0; } }

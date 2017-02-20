@@ -1,9 +1,6 @@
-
 require('./sass/style.scss');
 require('./swiper/swiper.css');
 require('./colorbox/colorbox.css');
-
-
 
 require('./js/navigation.js');
 require('./js/ajax-pagination.js');
