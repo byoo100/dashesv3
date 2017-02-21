@@ -1,3 +1,35 @@
+.page-about{
+	#about-main{
+		padding: 3em 5%;
+
+		.about-row{
+			@include clearfix();
+			max-width: 1040px;
+			margin: 0 auto;
+			
+
+			#text-main{
+				@include span(5 of 12);
+				h1{ font-size: 4em; letter-spacing: -3px; margin: 0 0 0.2em; padding: 0; line-height: 1.2em; }
+				p{ margin: 0 0 1em; padding: 0; }
+				.intro{
+					font-size: 1.2em;
+					line-height: 1.35em;
+					margin: 0;
+					padding: 0;
+					color: $gray2;
+				}
+
+			}
+			#img-main{
+				@include span(7 of 12 no-gutters);
+			}
+		}
+	}
+} //page-about
+
+
+
 
 //WEB SECTION
 .web-section{

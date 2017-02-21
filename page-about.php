@@ -15,7 +15,18 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="page-about" role="main">
+
+			<section id="about-main">
+				<div class="about-row">
+					<div id="text-main">
+						<h1>about me</h1>
+						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
+						<p>MORE STUFF HERE</p>
+					</div>
+					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-adham-dannaway.jpg" alt=""></div>
+				</div>
+			</section>
 
 			<section class="post-content centered">
 				

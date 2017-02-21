@@ -1617,6 +1617,40 @@ a {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.page-about #about-main {
+  padding: 3em 5%; }
+  .page-about #about-main .about-row {
+    /*before, after*/
+    max-width: 1040px;
+    margin: 0 auto; }
+    .page-about #about-main .about-row:before, .page-about #about-main .about-row:after {
+      content: '';
+      display: table; }
+    .page-about #about-main .about-row:after {
+      clear: both; }
+    .page-about #about-main .about-row #text-main {
+      width: 40.67797%;
+      float: left;
+      margin-right: 1.69492%; }
+      .page-about #about-main .about-row #text-main h1 {
+        font-size: 4em;
+        letter-spacing: -3px;
+        margin: 0 0 0.2em;
+        padding: 0;
+        line-height: 1.2em; }
+      .page-about #about-main .about-row #text-main p {
+        margin: 0 0 1em;
+        padding: 0; }
+      .page-about #about-main .about-row #text-main .intro {
+        font-size: 1.2em;
+        line-height: 1.35em;
+        margin: 0;
+        padding: 0;
+        color: #818286; }
+    .page-about #about-main .about-row #img-main {
+      width: 57.62712%;
+      float: left; }
+
 .web-section {
   margin-bottom: 1em; }
   .web-section ul.web-icons {
