@@ -1,13 +1,13 @@
 .page-about{
 	#about-main{
+		@include clearfix();
 		padding: 3em 5%;
 
-		.about-row{
+		.row{
 			@include clearfix();
 			max-width: 1040px;
 			margin: 0 auto;
 			
-
 			#text-main{
 				@include span(5 of 12);
 				h1{ font-size: 4em; letter-spacing: -3px; margin: 0 0 0.2em; padding: 0; line-height: 1.2em; }
@@ -19,20 +19,94 @@
 					padding: 0;
 					color: $gray2;
 				}
-
 			}
 			#img-main{
 				@include span(7 of 12 no-gutters);
 			}
-		}
-	}
+		} //.row
+	} //#about-main
+
+	#about-site{
+		@include clearfix();
+		padding: 3em 5%;
+
+		.row{
+			@include clearfix();
+			max-width: 600px;
+			margin: 0 auto;
+
+			#text-site{
+				
+			}
+
+			#icon-site{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				overflow: auto;
+
+				li{
+					@include span(3 of 12 0);
+
+					p{
+						text-align: center;
+					}
+
+					.icon{
+						display: block;
+						background-image: url('../images/about/brian-icons-compressed.png');
+						background-repeat: no-repeat;
+						background-size: 200px;
+						width:50px;
+						height:50px;
+						margin: 0 auto;
+
+						&.gulp{ 		background-position: 0 0; }
+						&.webpack{ 		background-position: 0 -50px; }
+						&.wordpress{ 	background-position: 0 -100px; }
+						&.sublime{ 		background-position: 0 -150px; }
+						&.sass{ 		background-position: -50px 0; }
+						&.github{ 		background-position: -50px -50px; }
+						&.underscore{ 	background-position: -50px -100px; }
+						&.susy{ 		background-position: -100px 0; }
+						&.gitbash{ 		background-position: -100px -50px; }
+						&.acf{ 			background-position: -100px -100px; }
+						&.compass{ 		background-position: -150px 0; }
+						&.mamp{ 		background-position: -150px -50px; }
+						&.swiper{ 		background-position: -150px -100px; }
+
+						@media screen and (min-width: $mobile-width){ 
+							background-size: 400px;
+							width:100px; 
+							height:100px; 
+							
+							&.gulp{ 		background-position: 0 0; }
+							&.webpack{ 		background-position: 0 -100px; }
+							&.wordpress{ 	background-position: 0 -200px; }
+							&.sublime{ 		background-position: 0 -300px; }
+							&.sass{ 		background-position: -100px 0; }
+							&.github{ 		background-position: -100px -100px; }
+							&.underscore{ 	background-position: -100px -200px; }
+							&.susy{ 		background-position: -200px 0; }
+							&.gitbash{ 		background-position: -200px -100px; }
+							&.acf{ 			background-position: -200px -200px; }
+							&.compass{ 		background-position: -300px 0; }
+							&.mamp{ 		background-position: -300px -100px; }
+							&.swiper{ 		background-position: -300px -200px; }
+						}
+					} //icon
+				}
+
+			}
+		} //.row
+	} //#about-site
 } //page-about
 
 
 
 
 //WEB SECTION
-.web-section{
+.about-site{
 	margin-bottom: 1em;
 
 

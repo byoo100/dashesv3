@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="page-about" role="main">
 
 			<section id="about-main">
-				<div class="about-row">
+				<div class="row">
 					<div id="text-main">
 						<h1>about me</h1>
 						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
@@ -28,23 +28,30 @@ get_header(); ?>
 				</div>
 			</section>
 
+			<section id="about-site">
+				<div class="row">
+					<div id="text-site">
+						<h2>This site was made with</h2>
+					</div>
+					<ul id="icon-site">
+				        <li><span class="icon wordpress"></span> <p>Wordpress</p></li>
+				        <li><span class="icon webpack"></span> <p>Webpack</p></li>
+				        <li><span class="icon mamp"></span> <p>Mamp / Wamp</p></li>
+				        <li><span class="icon underscore"></span> <p>Underscore</p></li>
+				        <li><span class="icon acf"></span> <p>ACF</p></li>
+					 	<li><span class="icon sass"></span> <p>Sass</p></li>
+					 	<li><span class="icon susy"></span> <p>Susy</p></li>
+					 	<li><span class="icon sublime"></span> <p>Sublime Text</p></li>
+					 	<li><span class="icon swiper"></span> <p>SwiperJS</p></li>
+					 	<li><span class="icon github"></span> <p>Github</p></li>
+					</ul>
+				</div>
+			</section>
+
 			<section class="post-content centered">
 				
 				<section class="web-section">
-					<h2>This site</h2>
-					<p>was made with</p>
-					<ul class="web-icons">
-				        <li><span class="web web-wordpress"></span><span class="text">Wordpress</span></li>
-				        <li><span class="web web-webpack"></span><span class="text">Webpack</span></li>
-				        <li><span class="web web-mamp"></span><span class="text">Mamp / Wamp</span></li>
-				        <li><span class="web web-underscore"></span><span class="text">Underscore</span></li>
-				        <li><span class="web web-acf"></span><span class="text">ACF</span></li>
-					 	<li><span class="web web-sass"></span><span class="text">Sass</span></li>
-					 	<li><span class="web web-susy"></span><span class="text">Susy</span></li>
-					 	<li><span class="web web-sublime"></span><span class="text">Sublime Text</span></li>
-					 	<li><span class="web web-swiper"></span><span class="text">SwiperJS</span></li>
-					 	<li><span class="web web-github"></span><span class="text">Github</span></li>
-					</ul>
+					
 				</section>
 
 				<section class="thumb-zone">
