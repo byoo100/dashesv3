@@ -24,7 +24,7 @@ get_header(); ?>
 						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
 						<p>MORE STUFF HERE</p>
 					</div>
-					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-adham-dannaway.jpg" alt=""></div>
+					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-brian.jpg" alt=""></div>
 				</div>
 			</section>
 
