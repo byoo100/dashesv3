@@ -30,9 +30,7 @@ get_header(); ?>
 
 			<section id="about-site">
 				<div class="row">
-					<div id="text-site">
-						<h2>This site was made with</h2>
-					</div>
+					<h2 id="title-site">This site was made with</h2>
 					<ul id="icon-site">
 				        <li><span class="icon wordpress"></span> <p>Wordpress</p></li>
 				        <li><span class="icon webpack"></span> <p>Webpack</p></li>
@@ -45,26 +43,27 @@ get_header(); ?>
 					 	<li><span class="icon swiper"></span> <p>SwiperJS</p></li>
 					 	<li><span class="icon github"></span> <p>Github</p></li>
 					</ul>
+					<div id="text-site">
+						<p>Originally this site was made with Gulp, Compass, and breakpoint; but I switched to webpack to familiarize myself with it. Even though webpack might be overkill and not needed for a wordpress site, it has taken care of everything I needed. It replaces Gulp.  Sass-loader comes with basic Compass. And I can use sass without breakpoint.</p>
+						<p>Another reason for switching to webpack is to use it with ReactJS and start learning a new framework.</p>
+					</div>
 				</div>
+			</section>
+
+			<section id="about-resources">
+				<h1 class="title-resources">Online Resources</h1>
+				<p class="text-resources">I use many different resources from the internet, but a few that I use on a regular basis are:</p>
+					<ul>
+						<li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed</a></li>
+						<li><a href="https://gtmetrix.com/" target="_blank">GT Metrix</a></li>
+						<li><a href="https://compressor.io/" target="_blank">Image Compressor</a></li>
+						<li><a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">SVG Optimiser</a></li>
+						<li><a href="https://color.adobe.com/explore/most-popular/?time=all" target="_blank">Adobe Color</a></li>
+					</ul>
 			</section>
 
 			<section class="post-content centered">
 				
-				<section class="web-section">
-					
-				</section>
-
-				<section class="thumb-zone">
-					<div class="thumb-text">
-						<h2 class="thumb-title">The Phone's Thumb Zone</h2>
-
-						<p>Josh Clark wrote an <a href="http://alistapart.com/article/how-we-hold-our-gadgets">article</a> describing how we hold our gadgets.  In a world that revolves around smart phones, I strongly take the Thumb Zone in to consideration when creating a site.</p>
-					</div>
-	
-					<div class="thumb-image">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/src/images/about/thumb-zone-compressed.png"></img>
-					</div>
-				</section>
 
 				<section class="miscellaneous">
 					<div class="misc-wrapper">

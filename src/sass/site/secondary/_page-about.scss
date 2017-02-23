@@ -32,21 +32,33 @@
 
 		.row{
 			@include clearfix();
-			max-width: 600px;
+			max-width: 1000px;
 			margin: 0 auto;
 
+			#title-site{
+				@include span(12);
+				text-align: left;
+				@media screen and (min-width: $tablet-width){ @include span(4.8); text-align: right; }
+			}
+
 			#text-site{
-				
+				@include span(12);	
+				text-align: left;
+				@media screen and (min-width: $tablet-width){ @include span(4.8); text-align: right; }
 			}
 
 			#icon-site{
+				@include span(12 split);
 				margin: 0;
 				padding: 0;
 				list-style: none;
 				overflow: auto;
 
+				@media screen and (min-width: $tablet-width){ @include span(7.2 no-gutters last); }
+
 				li{
 					@include span(3 of 12 0);
+					@media screen and (min-width: $tablet-width) and (max-width: $desktop-width){ @include span(4 of 12 0); }
 
 					p{
 						text-align: center;
@@ -176,29 +188,6 @@
 		} //li
 	} //ul.web-icons
 } //web-section
-
-
-//THUMB ZONE
-.thumb-zone{
-		display: block;
-		position: relative;
-		margin-bottom: 1em;
-
-		.thumb-image,
-		.thumb-text{
-			display: table-cell;
-			position: relative;
-			vertical-align: middle;
-		}
-
-		.thumb-image{ width: 40%; }
-		.thumb-text{ width: 60%; }
-
-		.thumb-title{
-			font-size: 1.25em;
-			@media screen and (min-width: $mobile-width){ font-size: 1.8em; }
-		} //thumb-title
-} //thumb-zone
 
 
 //MISCELLANEOUS
