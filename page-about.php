@@ -50,6 +50,26 @@ get_header(); ?>
 				</div>
 			</section>
 
+			<section id="about-programs">
+				<div class="left">
+					<h2 class="title-programs">Programs</h2>
+					<ul>
+						<li><i class="icon photoshop"></i><span class="screen-reader-text">Photoshop</span></li>
+						<li><i class="icon illustrator"></i><span class="screen-reader-text">Illustrator</span></li>
+						<li><i class="icon lightroom"></i><span class="screen-reader-text">Lightroom</span></li>
+						<li><i class="icon premiere"></i><span class="screen-reader-text">Premiere</span></li>
+						<li><i class="icon after-effects"></i><span class="screen-reader-text">After Effects</span></li>
+						<li><i class="icon audition"></i><span class="screen-reader-text">Audition</span></li>
+					</ul>
+				</div>
+				<div class="right">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/images/about/about-programs.png" alt="">
+				</div>
+
+				
+
+			</section>
+
 			<section id="about-resources">
 				<h1 class="title-resources">Online Resources</h1>
 				<p class="text-resources">I use many different resources from the internet, but a few that I use on a regular basis are:</p>

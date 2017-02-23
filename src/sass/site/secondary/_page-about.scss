@@ -38,13 +38,13 @@
 			#title-site{
 				@include span(12);
 				text-align: left;
-				@media screen and (min-width: $tablet-width){ @include span(4.8); text-align: right; }
+				@media screen and (min-width: $mobile-width){ @include span(4.8); text-align: right; }
 			}
 
 			#text-site{
 				@include span(12);	
 				text-align: left;
-				@media screen and (min-width: $tablet-width){ @include span(4.8); text-align: right; }
+				@media screen and (min-width: $mobile-width){ @include span(4.8); text-align: right; }
 			}
 
 			#icon-site{
@@ -54,140 +54,52 @@
 				list-style: none;
 				overflow: auto;
 
-				@media screen and (min-width: $tablet-width){ @include span(7.2 no-gutters last); }
+				@media screen and (min-width: $mobile-width){ @include span(7.2 no-gutters last); }
 
 				li{
-					@include span(3 of 12 0);
-					@media screen and (min-width: $tablet-width) and (max-width: $desktop-width){ @include span(4 of 12 0); }
-
-					p{
-						text-align: center;
-					}
+					@include span(4 of 12 0);
+					@media screen and (min-width: $tablet-width){ @include span(3 of 12 0); }
+					margin-bottom: 1em;
 
 					.icon{
 						display: block;
-						background-image: url('../images/about/brian-icons-compressed.png');
-						background-repeat: no-repeat;
-						background-size: 200px;
-						width:50px;
-						height:50px;
-						margin: 0 auto;
+						margin: 0 auto 0.5em;
 
-						&.gulp{ 		background-position: 0 0; }
-						&.webpack{ 		background-position: 0 -50px; }
-						&.wordpress{ 	background-position: 0 -100px; }
-						&.sublime{ 		background-position: 0 -150px; }
-						&.sass{ 		background-position: -50px 0; }
-						&.github{ 		background-position: -50px -50px; }
-						&.underscore{ 	background-position: -50px -100px; }
-						&.susy{ 		background-position: -100px 0; }
-						&.gitbash{ 		background-position: -100px -50px; }
-						&.acf{ 			background-position: -100px -100px; }
-						&.compass{ 		background-position: -150px 0; }
-						&.mamp{ 		background-position: -150px -50px; }
-						&.swiper{ 		background-position: -150px -100px; }
-
-						@media screen and (min-width: $mobile-width){ 
-							background-size: 400px;
-							width:100px; 
-							height:100px; 
-							
-							&.gulp{ 		background-position: 0 0; }
-							&.webpack{ 		background-position: 0 -100px; }
-							&.wordpress{ 	background-position: 0 -200px; }
-							&.sublime{ 		background-position: 0 -300px; }
-							&.sass{ 		background-position: -100px 0; }
-							&.github{ 		background-position: -100px -100px; }
-							&.underscore{ 	background-position: -100px -200px; }
-							&.susy{ 		background-position: -200px 0; }
-							&.gitbash{ 		background-position: -200px -100px; }
-							&.acf{ 			background-position: -200px -200px; }
-							&.compass{ 		background-position: -300px 0; }
-							&.mamp{ 		background-position: -300px -100px; }
-							&.swiper{ 		background-position: -300px -200px; }
-						}
+						@include about-icons(300px);
+						@media screen and (min-width: $tablet-width){ @include about-icons(400px); }
 					} //icon
+
+					p{
+						margin: 0;
+						text-align: center;
+					}
 				}
 
 			}
 		} //.row
 	} //#about-site
+
+	#about-programs{
+		.left{
+			@include span(4);
+
+			.icon{
+				@include programs-icons(150px);
+			}
+		}
+
+		.right{
+			@include span(8 last);
+		}
+	}
+
+
 } //page-about
 
 
 
 
-//WEB SECTION
-.about-site{
-	margin-bottom: 1em;
 
-
-	ul.web-icons {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		margin: 0;
-		padding: 0;
-
-		li{
-			flex: 0 0 33%;
-			margin-bottom: 1em;
-			text-align: center;
-			list-style: none;
-
-			@media screen and (min-width: $tablet-width){ flex: 0 0 25%; }
-			
-			.web{
-				display: block;
-				background-image: url('../images/about/brian-icons-compressed.png');
-				background-repeat: no-repeat;
-				background-size: 200px;
-				width:50px;
-				height:50px;
-				margin: 0 auto;
-
-				&.web-gulp{ 		background-position: 0 0; }
-				&.web-webpack{ 		background-position: 0 -50px; }
-				&.web-wordpress{ 	background-position: 0 -100px; }
-				&.web-sublime{ 		background-position: 0 -150px; }
-				&.web-sass{ 		background-position: -50px 0; }
-				&.web-github{ 		background-position: -50px -50px; }
-				&.web-underscore{ 	background-position: -50px -100px; }
-				&.web-susy{ 		background-position: -100px 0; }
-				&.web-gitbash{ 		background-position: -100px -50px; }
-				&.web-acf{ 			background-position: -100px -100px; }
-				&.web-compass{ 		background-position: -150px 0; }
-				&.web-mamp{ 		background-position: -150px -50px; }
-				&.web-swiper{ 		background-position: -150px -100px; }
-
-				@media screen and (min-width: $mobile-width){ 
-					background-size: 400px;
-					width:100px; 
-					height:100px; 
-					
-					&.web-gulp{ 		background-position: 0 0; }
-					&.web-webpack{ 		background-position: 0 -100px; }
-					&.web-wordpress{ 	background-position: 0 -200px; }
-					&.web-sublime{ 		background-position: 0 -300px; }
-					&.web-sass{ 		background-position: -100px 0; }
-					&.web-github{ 		background-position: -100px -100px; }
-					&.web-underscore{ 	background-position: -100px -200px; }
-					&.web-susy{ 		background-position: -200px 0; }
-					&.web-gitbash{ 		background-position: -200px -100px; }
-					&.web-acf{ 			background-position: -200px -200px; }
-					&.web-compass{ 		background-position: -300px 0; }
-					&.web-mamp{ 		background-position: -300px -100px; }
-					&.web-swiper{ 		background-position: -300px -200px; }
-				}
-			} //web
-
-			.text{
-				display: inline-block;
-				text-align: center;
-			}
-		} //li
-	} //ul.web-icons
-} //web-section
 
 
 //MISCELLANEOUS

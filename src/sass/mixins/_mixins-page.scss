@@ -107,3 +107,46 @@
   &.color-photography { color: $color_photography; }
   &.color-media { color: $color_media; }
 }
+
+
+@mixin about-icons($size){
+  $val: calc(#{$size} / 4);
+
+  background-image: url('../images/about/brian-icons-compressed.png');
+  background-repeat: no-repeat;
+  background-size: $size;
+  width: $val; 
+  height: $val; 
+  
+  &.gulp{       background-position: 0 0; }
+  &.webpack{    background-position: 0 calc(#{$val} * -1); }
+  &.wordpress{  background-position: 0 calc(#{$val} * -2); }
+  &.sublime{    background-position: 0 calc(#{$val} * -3); }
+  &.sass{       background-position: calc(#{$val} * -1) 0; }
+  &.github{     background-position: calc(#{$val} * -1) calc(#{$val} * -1); }
+  &.underscore{ background-position: calc(#{$val} * -1) calc(#{$val} * -2); }
+  &.susy{       background-position: calc(#{$val} * -2) 0; }
+  &.gitbash{    background-position: calc(#{$val} * -2) calc(#{$val} * -1); }
+  &.acf{        background-position: calc(#{$val} * -2) calc(#{$val} * -2); }
+  &.compass{    background-position: calc(#{$val} * -3) 0; }
+  &.mamp{       background-position: calc(#{$val} * -3) calc(#{$val} * -1); }
+  &.swiper{     background-position: calc(#{$val} * -3) calc(#{$val} * -2); }
+}
+
+@mixin programs-icons($size){
+  $val: calc(#{$size} / 3);
+  
+  display: block;
+  background-image: url('../images/about/adobe-compressed.png');
+  background-repeat: no-repeat;
+  background-size: $size;
+  width: $val; 
+  height: $val; 
+  
+  &.photoshop{      background-position: 0 0; }
+  &.premiere{       background-position: 0 calc(#{$val} * -1); }
+  &.lightroom{      background-position: calc(#{$val} * -1) 0; }
+  &.after-effects{  background-position: calc(#{$val} * -1) calc(#{$val} * -1); }
+  &.illustrator{    background-position: calc(#{$val} * -2) 0; }
+  &.audition{       background-position: calc(#{$val} * -2) calc(#{$val} * -1); }
+}

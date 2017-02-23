@@ -1680,7 +1680,7 @@ a {
       margin-left: 0;
       margin-right: 0;
       text-align: left; }
-      @media screen and (min-width: 62.5rem) {
+      @media screen and (min-width: 37.5rem) {
         .page-about #about-site .row #title-site {
           width: 38.98305%;
           float: left;
@@ -1692,7 +1692,7 @@ a {
       margin-left: 0;
       margin-right: 0;
       text-align: left; }
-      @media screen and (min-width: 62.5rem) {
+      @media screen and (min-width: 37.5rem) {
         .page-about #about-site .row #text-site {
           width: 38.98305%;
           float: left;
@@ -1707,198 +1707,118 @@ a {
       padding: 0;
       list-style: none;
       overflow: auto; }
-      @media screen and (min-width: 62.5rem) {
+      @media screen and (min-width: 37.5rem) {
         .page-about #about-site .row #icon-site {
           width: 59.32203%;
           float: right;
           margin-right: 0; } }
       .page-about #about-site .row #icon-site li {
-        width: 25%;
-        float: left; }
-        @media screen and (min-width: 62.5rem) and (max-width: 87.5rem) {
+        width: 33.33333%;
+        float: left;
+        margin-bottom: 1em; }
+        @media screen and (min-width: 62.5rem) {
           .page-about #about-site .row #icon-site li {
-            width: 33.33333%;
+            width: 25%;
             float: left; } }
-        .page-about #about-site .row #icon-site li p {
-          text-align: center; }
         .page-about #about-site .row #icon-site li .icon {
           display: block;
+          margin: 0 auto 0.5em;
           background-image: url(src/images/about/brian-icons-compressed.png);
           background-repeat: no-repeat;
-          background-size: 200px;
-          width: 50px;
-          height: 50px;
-          margin: 0 auto; }
+          background-size: 300px;
+          width: calc(300px / 4);
+          height: calc(300px / 4); }
           .page-about #about-site .row #icon-site li .icon.gulp {
             background-position: 0 0; }
           .page-about #about-site .row #icon-site li .icon.webpack {
-            background-position: 0 -50px; }
+            background-position: 0 calc(calc(300px / 4) * -1); }
           .page-about #about-site .row #icon-site li .icon.wordpress {
-            background-position: 0 -100px; }
+            background-position: 0 calc(calc(300px / 4) * -2); }
           .page-about #about-site .row #icon-site li .icon.sublime {
-            background-position: 0 -150px; }
+            background-position: 0 calc(calc(300px / 4) * -3); }
           .page-about #about-site .row #icon-site li .icon.sass {
-            background-position: -50px 0; }
+            background-position: calc(calc(300px / 4) * -1) 0; }
           .page-about #about-site .row #icon-site li .icon.github {
-            background-position: -50px -50px; }
+            background-position: calc(calc(300px / 4) * -1) calc(calc(300px / 4) * -1); }
           .page-about #about-site .row #icon-site li .icon.underscore {
-            background-position: -50px -100px; }
+            background-position: calc(calc(300px / 4) * -1) calc(calc(300px / 4) * -2); }
           .page-about #about-site .row #icon-site li .icon.susy {
-            background-position: -100px 0; }
+            background-position: calc(calc(300px / 4) * -2) 0; }
           .page-about #about-site .row #icon-site li .icon.gitbash {
-            background-position: -100px -50px; }
+            background-position: calc(calc(300px / 4) * -2) calc(calc(300px / 4) * -1); }
           .page-about #about-site .row #icon-site li .icon.acf {
-            background-position: -100px -100px; }
+            background-position: calc(calc(300px / 4) * -2) calc(calc(300px / 4) * -2); }
           .page-about #about-site .row #icon-site li .icon.compass {
-            background-position: -150px 0; }
+            background-position: calc(calc(300px / 4) * -3) 0; }
           .page-about #about-site .row #icon-site li .icon.mamp {
-            background-position: -150px -50px; }
+            background-position: calc(calc(300px / 4) * -3) calc(calc(300px / 4) * -1); }
           .page-about #about-site .row #icon-site li .icon.swiper {
-            background-position: -150px -100px; }
-          @media screen and (min-width: 37.5rem) {
+            background-position: calc(calc(300px / 4) * -3) calc(calc(300px / 4) * -2); }
+          @media screen and (min-width: 62.5rem) {
             .page-about #about-site .row #icon-site li .icon {
+              background-image: url(src/images/about/brian-icons-compressed.png);
+              background-repeat: no-repeat;
               background-size: 400px;
-              width: 100px;
-              height: 100px; }
+              width: calc(400px / 4);
+              height: calc(400px / 4); }
               .page-about #about-site .row #icon-site li .icon.gulp {
                 background-position: 0 0; }
               .page-about #about-site .row #icon-site li .icon.webpack {
-                background-position: 0 -100px; }
+                background-position: 0 calc(calc(400px / 4) * -1); }
               .page-about #about-site .row #icon-site li .icon.wordpress {
-                background-position: 0 -200px; }
+                background-position: 0 calc(calc(400px / 4) * -2); }
               .page-about #about-site .row #icon-site li .icon.sublime {
-                background-position: 0 -300px; }
+                background-position: 0 calc(calc(400px / 4) * -3); }
               .page-about #about-site .row #icon-site li .icon.sass {
-                background-position: -100px 0; }
+                background-position: calc(calc(400px / 4) * -1) 0; }
               .page-about #about-site .row #icon-site li .icon.github {
-                background-position: -100px -100px; }
+                background-position: calc(calc(400px / 4) * -1) calc(calc(400px / 4) * -1); }
               .page-about #about-site .row #icon-site li .icon.underscore {
-                background-position: -100px -200px; }
+                background-position: calc(calc(400px / 4) * -1) calc(calc(400px / 4) * -2); }
               .page-about #about-site .row #icon-site li .icon.susy {
-                background-position: -200px 0; }
+                background-position: calc(calc(400px / 4) * -2) 0; }
               .page-about #about-site .row #icon-site li .icon.gitbash {
-                background-position: -200px -100px; }
+                background-position: calc(calc(400px / 4) * -2) calc(calc(400px / 4) * -1); }
               .page-about #about-site .row #icon-site li .icon.acf {
-                background-position: -200px -200px; }
+                background-position: calc(calc(400px / 4) * -2) calc(calc(400px / 4) * -2); }
               .page-about #about-site .row #icon-site li .icon.compass {
-                background-position: -300px 0; }
+                background-position: calc(calc(400px / 4) * -3) 0; }
               .page-about #about-site .row #icon-site li .icon.mamp {
-                background-position: -300px -100px; }
+                background-position: calc(calc(400px / 4) * -3) calc(calc(400px / 4) * -1); }
               .page-about #about-site .row #icon-site li .icon.swiper {
-                background-position: -300px -200px; } }
+                background-position: calc(calc(400px / 4) * -3) calc(calc(400px / 4) * -2); } }
+        .page-about #about-site .row #icon-site li p {
+          margin: 0;
+          text-align: center; }
 
-.about-site {
-  margin-bottom: 1em; }
-  .about-site ul.web-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 0;
-    padding: 0; }
-    .about-site ul.web-icons li {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 33%;
-              flex: 0 0 33%;
-      margin-bottom: 1em;
-      text-align: center;
-      list-style: none; }
-      @media screen and (min-width: 62.5rem) {
-        .about-site ul.web-icons li {
-          -webkit-box-flex: 0;
-              -ms-flex: 0 0 25%;
-                  flex: 0 0 25%; } }
-      .about-site ul.web-icons li .web {
-        display: block;
-        background-image: url(src/images/about/brian-icons-compressed.png);
-        background-repeat: no-repeat;
-        background-size: 200px;
-        width: 50px;
-        height: 50px;
-        margin: 0 auto; }
-        .about-site ul.web-icons li .web.web-gulp {
-          background-position: 0 0; }
-        .about-site ul.web-icons li .web.web-webpack {
-          background-position: 0 -50px; }
-        .about-site ul.web-icons li .web.web-wordpress {
-          background-position: 0 -100px; }
-        .about-site ul.web-icons li .web.web-sublime {
-          background-position: 0 -150px; }
-        .about-site ul.web-icons li .web.web-sass {
-          background-position: -50px 0; }
-        .about-site ul.web-icons li .web.web-github {
-          background-position: -50px -50px; }
-        .about-site ul.web-icons li .web.web-underscore {
-          background-position: -50px -100px; }
-        .about-site ul.web-icons li .web.web-susy {
-          background-position: -100px 0; }
-        .about-site ul.web-icons li .web.web-gitbash {
-          background-position: -100px -50px; }
-        .about-site ul.web-icons li .web.web-acf {
-          background-position: -100px -100px; }
-        .about-site ul.web-icons li .web.web-compass {
-          background-position: -150px 0; }
-        .about-site ul.web-icons li .web.web-mamp {
-          background-position: -150px -50px; }
-        .about-site ul.web-icons li .web.web-swiper {
-          background-position: -150px -100px; }
-        @media screen and (min-width: 37.5rem) {
-          .about-site ul.web-icons li .web {
-            background-size: 400px;
-            width: 100px;
-            height: 100px; }
-            .about-site ul.web-icons li .web.web-gulp {
-              background-position: 0 0; }
-            .about-site ul.web-icons li .web.web-webpack {
-              background-position: 0 -100px; }
-            .about-site ul.web-icons li .web.web-wordpress {
-              background-position: 0 -200px; }
-            .about-site ul.web-icons li .web.web-sublime {
-              background-position: 0 -300px; }
-            .about-site ul.web-icons li .web.web-sass {
-              background-position: -100px 0; }
-            .about-site ul.web-icons li .web.web-github {
-              background-position: -100px -100px; }
-            .about-site ul.web-icons li .web.web-underscore {
-              background-position: -100px -200px; }
-            .about-site ul.web-icons li .web.web-susy {
-              background-position: -200px 0; }
-            .about-site ul.web-icons li .web.web-gitbash {
-              background-position: -200px -100px; }
-            .about-site ul.web-icons li .web.web-acf {
-              background-position: -200px -200px; }
-            .about-site ul.web-icons li .web.web-compass {
-              background-position: -300px 0; }
-            .about-site ul.web-icons li .web.web-mamp {
-              background-position: -300px -100px; }
-            .about-site ul.web-icons li .web.web-swiper {
-              background-position: -300px -200px; } }
-      .about-site ul.web-icons li .text {
-        display: inline-block;
-        text-align: center; }
+.page-about #about-programs .left {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%; }
+  .page-about #about-programs .left .icon {
+    display: block;
+    background-image: url(src/images/about/adobe-compressed.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    width: calc(150px / 3);
+    height: calc(150px / 3); }
+    .page-about #about-programs .left .icon.photoshop {
+      background-position: 0 0; }
+    .page-about #about-programs .left .icon.premiere {
+      background-position: 0 calc(calc(150px / 3) * -1); }
+    .page-about #about-programs .left .icon.lightroom {
+      background-position: calc(calc(150px / 3) * -1) 0; }
+    .page-about #about-programs .left .icon.after-effects {
+      background-position: calc(calc(150px / 3) * -1) calc(calc(150px / 3) * -1); }
+    .page-about #about-programs .left .icon.illustrator {
+      background-position: calc(calc(150px / 3) * -2) 0; }
+    .page-about #about-programs .left .icon.audition {
+      background-position: calc(calc(150px / 3) * -2) calc(calc(150px / 3) * -1); }
 
-.thumb-zone {
-  display: block;
-  position: relative;
-  margin-bottom: 1em; }
-  .thumb-zone .thumb-image,
-  .thumb-zone .thumb-text {
-    display: table-cell;
-    position: relative;
-    vertical-align: middle; }
-  .thumb-zone .thumb-image {
-    width: 40%; }
-  .thumb-zone .thumb-text {
-    width: 60%; }
-  .thumb-zone .thumb-title {
-    font-size: 1.25em; }
-    @media screen and (min-width: 37.5rem) {
-      .thumb-zone .thumb-title {
-        font-size: 1.8em; } }
+.page-about #about-programs .right {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0; }
 
 .miscellaneous {
   /*before, after*/
