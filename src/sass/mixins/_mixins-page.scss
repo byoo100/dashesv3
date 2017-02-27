@@ -136,7 +136,6 @@
 @mixin programs-icons($size){
   $val: calc(#{$size} / 3);
   
-  display: block;
   background-image: url('../images/about/adobe-compressed.png');
   background-repeat: no-repeat;
   background-size: $size;

@@ -58,12 +58,12 @@ get_header(); ?>
 							<p>These are a few programs that I am familiar with. I am not an expert with them, but I do use them on a regular basis. Each of them are tools and used for different situations. Currently I use Photoshop, Premiere and Lightroom the most.</p>
 						</div>
 						<ul>
-							<li><i class="icon photoshop"></i><span class="screen-reader-text">Photoshop</span></li>
-							<li><i class="icon illustrator"></i><span class="screen-reader-text">Illustrator</span></li>
-							<li><i class="icon lightroom"></i><span class="screen-reader-text">Lightroom</span></li>
-							<li><i class="icon premiere"></i><span class="screen-reader-text">Premiere</span></li>
-							<li><i class="icon after-effects"></i><span class="screen-reader-text">After Effects</span></li>
-							<li><i class="icon audition"></i><span class="screen-reader-text">Audition</span></li>
+							<li class="icon photoshop"><span class="screen-reader-text">Photoshop</span></li>
+							<li class="icon illustrator"><span class="screen-reader-text">Illustrator</span></li>
+							<li class="icon lightroom"><span class="screen-reader-text">Lightroom</span></li>
+							<li class="icon premiere"><span class="screen-reader-text">Premiere</span></li>
+							<li class="icon after-effects"><span class="screen-reader-text">After Effects</span></li>
+							<li class="icon audition"><span class="screen-reader-text">Audition</span></li>
 						</ul>
 					</div>
 					<div class="right">
@@ -84,59 +84,8 @@ get_header(); ?>
 					</ul>
 			</section>
 
-			<section class="post-content centered">
-				
 
-				<section class="miscellaneous">
-					<div class="misc-wrapper">
 
-					<div class="programs">
-						<div class="misc-content">
-							<div class="misc-title"><i class="misc-icon fa fa-picture-o" aria-hidden="true"></i>Programs</div>
-							<div class="misc-text">I do not claim to be an expert with these programs, but a few programs that I do use are:</div>
-							<ul>
-								<li><i class="adobe photoshop"></i><span class="screen-reader-text">Photoshop</span></li>
-								<li><i class="adobe illustrator"></i><span class="screen-reader-text">Illustrator</span></li>
-								<li><i class="adobe lightroom"></i><span class="screen-reader-text">Lightroom</span></li>
-								<li><i class="adobe premiere"></i><span class="screen-reader-text">Premiere</span></li>
-								<li><i class="adobe after-effects"></i><span class="screen-reader-text">After Effects</span></li>
-								<li><i class="adobe audition"></i><span class="screen-reader-text">Audition</span></li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="cameras">
-
-						<div class="misc-content">
-							<div class="misc-title"><i class="misc-icon fa fa-camera-retro" aria-hidden="true"></i>Cameras</div>
-							<div class="misc-text">Currently I own a Nikon D610. A few camera bodies that I've used are:</div>
-							<ul>
-								<li>Canon 6D</li>
-								<li>Nikon D610</li>
-								<li>Canon XHA1</li>
-								<li>Canon XLH1</li>
-								<li>Canon XF305</li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="extralinks">
-
-						<div class="misc-content">
-							<div class="misc-title"><i class="misc-icon fa fa-tasks" aria-hidden="true"></i>Resources</div>
-							<div class="misc-text">I use many different resources from the internet, but a few that I use on a regular basis are:</div>
-							<ul>
-								<li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed</a></li>
-								<li><a href="https://gtmetrix.com/" target="_blank">GT Metrix</a></li>
-								<li><a href="https://compressor.io/" target="_blank">Image Compressor</a></li>
-								<li><a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">SVG Optimiser</a></li>
-								<li><a href="https://color.adobe.com/explore/most-popular/?time=all" target="_blank">Adobe Color</a></li>
-							</ul>
-						</div>
-					</div>
-					</div>
-				</section>
-			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -87,26 +87,21 @@
 		.row{
 			@include clearfix();
 			@include container(1100px);
+			display: flex;
 
 			.left{
 				@include span(4 of 10);
 
 				ul{
 					display: block;
-					@include container(200px);
-					margin-top: 0;
-					margin-bottom: 0;
+					margin:0 auto;
 					padding: 0;
+					text-align: center;
 					list-style: none;
 
-					li{
-						@include span(1 of 3 split);
-						padding-bottom: gutters(4);
-
-						.icon{
-							@include programs-icons(150px);
-						}
-
+					li.icon{
+						display: inline-block;
+						@include programs-icons(150px);
 					} 
 					
 				}
@@ -115,6 +110,9 @@
 			}
 
 			.right{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 				@include span(6 of 10 last);
 
 				img{ margin-left: auto; }
