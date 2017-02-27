@@ -24,7 +24,7 @@ get_header(); ?>
 						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
 						<p>MORE STUFF HERE</p>
 					</div>
-					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-brian.jpg" alt=""></div>
+					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-brian.jpg"></div>
 				</div>
 			</section>
 
@@ -51,23 +51,25 @@ get_header(); ?>
 			</section>
 
 			<section id="about-programs">
-				<div class="left">
-					<h2 class="title-programs">Programs</h2>
-					<ul>
-						<li><i class="icon photoshop"></i><span class="screen-reader-text">Photoshop</span></li>
-						<li><i class="icon illustrator"></i><span class="screen-reader-text">Illustrator</span></li>
-						<li><i class="icon lightroom"></i><span class="screen-reader-text">Lightroom</span></li>
-						<li><i class="icon premiere"></i><span class="screen-reader-text">Premiere</span></li>
-						<li><i class="icon after-effects"></i><span class="screen-reader-text">After Effects</span></li>
-						<li><i class="icon audition"></i><span class="screen-reader-text">Audition</span></li>
-					</ul>
+				<div class="row">
+					<div class="left">
+						<h2 class="title-programs">Programs</h2>
+						<div id="text-site">
+							<p>These are a few programs that I am familiar with. I am not an expert with them, but I do use them on a regular basis. Each of them are tools and used for different situations. Currently I use Photoshop, Premiere and Lightroom the most.</p>
+						</div>
+						<ul>
+							<li><i class="icon photoshop"></i><span class="screen-reader-text">Photoshop</span></li>
+							<li><i class="icon illustrator"></i><span class="screen-reader-text">Illustrator</span></li>
+							<li><i class="icon lightroom"></i><span class="screen-reader-text">Lightroom</span></li>
+							<li><i class="icon premiere"></i><span class="screen-reader-text">Premiere</span></li>
+							<li><i class="icon after-effects"></i><span class="screen-reader-text">After Effects</span></li>
+							<li><i class="icon audition"></i><span class="screen-reader-text">Audition</span></li>
+						</ul>
+					</div>
+					<div class="right">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/images/about/about-programs.jpg" alt="">
+					</div>
 				</div>
-				<div class="right">
-					<img src="<?php echo get_stylesheet_directory_uri();?>/images/about/about-programs.png" alt="">
-				</div>
-
-				
-
 			</section>
 
 			<section id="about-resources">

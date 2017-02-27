@@ -1619,7 +1619,7 @@ a {
 --------------------------------------------------------------*/
 .page-about #about-main {
   /*before, after*/
-  padding: 3em 5%; }
+  padding: 3em 5% 0; }
   .page-about #about-main:before, .page-about #about-main:after {
     content: '';
     display: table; }
@@ -1627,17 +1627,21 @@ a {
     clear: both; }
   .page-about #about-main .row {
     /*before, after*/
-    max-width: 1040px;
-    margin: 0 auto; }
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
     .page-about #about-main .row:before, .page-about #about-main .row:after {
       content: '';
       display: table; }
     .page-about #about-main .row:after {
       clear: both; }
+    .page-about #about-main .row:after {
+      content: " ";
+      display: block;
+      clear: both; }
     .page-about #about-main .row #text-main {
-      width: 40.67797%;
-      float: left;
-      margin-right: 1.69492%; }
+      width: 40%;
+      float: left; }
       .page-about #about-main .row #text-main h1 {
         font-size: 4em;
         letter-spacing: -3px;
@@ -1654,12 +1658,15 @@ a {
         padding: 0;
         color: #818286; }
     .page-about #about-main .row #img-main {
-      width: 57.62712%;
+      width: 60%;
       float: left; }
 
 .page-about #about-site {
   /*before, after*/
-  padding: 3em 5%; }
+  padding: 3em 5%;
+  background-color: #fafafa;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: #dddddd solid 1px; }
   .page-about #about-site:before, .page-about #about-site:after {
     content: '';
     display: table; }
@@ -1668,11 +1675,16 @@ a {
   .page-about #about-site .row {
     /*before, after*/
     max-width: 1000px;
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto; }
     .page-about #about-site .row:before, .page-about #about-site .row:after {
       content: '';
       display: table; }
     .page-about #about-site .row:after {
+      clear: both; }
+    .page-about #about-site .row:after {
+      content: " ";
+      display: block;
       clear: both; }
     .page-about #about-site .row #title-site {
       width: 100%;
@@ -1691,7 +1703,8 @@ a {
       float: left;
       margin-left: 0;
       margin-right: 0;
-      text-align: left; }
+      text-align: left;
+      color: #818286; }
       @media screen and (min-width: 37.5rem) {
         .page-about #about-site .row #text-site {
           width: 38.98305%;
@@ -1791,34 +1804,76 @@ a {
           margin: 0;
           text-align: center; }
 
-.page-about #about-programs .left {
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%; }
-  .page-about #about-programs .left .icon {
-    display: block;
-    background-image: url(src/images/about/adobe-compressed.png);
-    background-repeat: no-repeat;
-    background-size: 150px;
-    width: calc(150px / 3);
-    height: calc(150px / 3); }
-    .page-about #about-programs .left .icon.photoshop {
-      background-position: 0 0; }
-    .page-about #about-programs .left .icon.premiere {
-      background-position: 0 calc(calc(150px / 3) * -1); }
-    .page-about #about-programs .left .icon.lightroom {
-      background-position: calc(calc(150px / 3) * -1) 0; }
-    .page-about #about-programs .left .icon.after-effects {
-      background-position: calc(calc(150px / 3) * -1) calc(calc(150px / 3) * -1); }
-    .page-about #about-programs .left .icon.illustrator {
-      background-position: calc(calc(150px / 3) * -2) 0; }
-    .page-about #about-programs .left .icon.audition {
-      background-position: calc(calc(150px / 3) * -2) calc(calc(150px / 3) * -1); }
-
-.page-about #about-programs .right {
-  width: 66.10169%;
-  float: right;
-  margin-right: 0; }
+.page-about #about-programs {
+  /*before, after*/
+  padding: 3em 5%; }
+  .page-about #about-programs:before, .page-about #about-programs:after {
+    content: '';
+    display: table; }
+  .page-about #about-programs:after {
+    clear: both; }
+  .page-about #about-programs .row {
+    /*before, after*/
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto; }
+    .page-about #about-programs .row:before, .page-about #about-programs .row:after {
+      content: '';
+      display: table; }
+    .page-about #about-programs .row:after {
+      clear: both; }
+    .page-about #about-programs .row:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    .page-about #about-programs .row .left {
+      width: 38.77551%;
+      float: left;
+      margin-right: 2.04082%; }
+      .page-about #about-programs .row .left ul {
+        display: block;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none; }
+        .page-about #about-programs .row .left ul:after {
+          content: " ";
+          display: block;
+          clear: both; }
+        .page-about #about-programs .row .left ul li {
+          width: 26.66667%;
+          float: left;
+          margin-left: 3.33333%;
+          margin-right: 3.33333%;
+          padding-bottom: 5.26316%; }
+          .page-about #about-programs .row .left ul li .icon {
+            display: block;
+            background-image: url(src/images/about/adobe-compressed.png);
+            background-repeat: no-repeat;
+            background-size: 150px;
+            width: calc(150px / 3);
+            height: calc(150px / 3); }
+            .page-about #about-programs .row .left ul li .icon.photoshop {
+              background-position: 0 0; }
+            .page-about #about-programs .row .left ul li .icon.premiere {
+              background-position: 0 calc(calc(150px / 3) * -1); }
+            .page-about #about-programs .row .left ul li .icon.lightroom {
+              background-position: calc(calc(150px / 3) * -1) 0; }
+            .page-about #about-programs .row .left ul li .icon.after-effects {
+              background-position: calc(calc(150px / 3) * -1) calc(calc(150px / 3) * -1); }
+            .page-about #about-programs .row .left ul li .icon.illustrator {
+              background-position: calc(calc(150px / 3) * -2) 0; }
+            .page-about #about-programs .row .left ul li .icon.audition {
+              background-position: calc(calc(150px / 3) * -2) calc(calc(150px / 3) * -1); }
+    .page-about #about-programs .row .right {
+      width: 59.18367%;
+      float: right;
+      margin-right: 0; }
+      .page-about #about-programs .row .right img {
+        margin-left: auto; }
 
 .miscellaneous {
   /*before, after*/

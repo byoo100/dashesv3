@@ -1,15 +1,14 @@
 .page-about{
 	#about-main{
 		@include clearfix();
-		padding: 3em 5%;
+		padding: 3em 5% 0;
 
 		.row{
 			@include clearfix();
-			max-width: 1040px;
-			margin: 0 auto;
+			@include container(1000px);
 			
 			#text-main{
-				@include span(5 of 12);
+				@include span(4 of 10 0);
 				h1{ font-size: 4em; letter-spacing: -3px; margin: 0 0 0.2em; padding: 0; line-height: 1.2em; }
 				p{ margin: 0 0 1em; padding: 0; }
 				.intro{
@@ -21,7 +20,7 @@
 				}
 			}
 			#img-main{
-				@include span(7 of 12 no-gutters);
+				@include span(6 of 10 0);
 			}
 		} //.row
 	} //#about-main
@@ -29,11 +28,13 @@
 	#about-site{
 		@include clearfix();
 		padding: 3em 5%;
+		background-color: #fafafa;
+		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+		border-bottom: #dddddd solid 1px;
 
 		.row{
 			@include clearfix();
-			max-width: 1000px;
-			margin: 0 auto;
+			@include container(1000px);
 
 			#title-site{
 				@include span(12);
@@ -44,6 +45,7 @@
 			#text-site{
 				@include span(12);	
 				text-align: left;
+				color: $gray2;
 				@media screen and (min-width: $mobile-width){ @include span(4.8); text-align: right; }
 			}
 
@@ -74,26 +76,51 @@
 						text-align: center;
 					}
 				}
-
 			}
 		} //.row
 	} //#about-site
 
 	#about-programs{
-		.left{
-			@include span(4);
+		@include clearfix();
+		padding: 3em 5%;
 
-			.icon{
-				@include programs-icons(150px);
+		.row{
+			@include clearfix();
+			@include container(1100px);
+
+			.left{
+				@include span(4 of 10);
+
+				ul{
+					display: block;
+					@include container(200px);
+					margin-top: 0;
+					margin-bottom: 0;
+					padding: 0;
+					list-style: none;
+
+					li{
+						@include span(1 of 3 split);
+						padding-bottom: gutters(4);
+
+						.icon{
+							@include programs-icons(150px);
+						}
+
+					} 
+					
+				}
+
+				
+			}
+
+			.right{
+				@include span(6 of 10 last);
+
+				img{ margin-left: auto; }
 			}
 		}
-
-		.right{
-			@include span(8 last);
-		}
 	}
-
-
 } //page-about
 
 
