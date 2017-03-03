@@ -22,15 +22,15 @@ get_header(); ?>
 					<div id="text-main">
 						<h1>about me</h1>
 						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
-						<p>MORE STUFF HERE</p>
+						<p>I enjoy the creativeness in the web development process. I also enjoy working with cameras and seeing how far I can push the hardware.</p>
 					</div>
-					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about/about-brian.jpg"></div>
+					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/src/images/about/about-brian-compressed.jpg"></div>
 				</div>
 			</section>
 
 			<section id="about-site">
 				<div class="row">
-					<h2 id="title-site">This site was made with</h2>
+					<h2 id="title-site">This Site</h2>
 					<ul id="icon-site">
 				        <li><span class="icon wordpress"></span> <p>Wordpress</p></li>
 				        <li><span class="icon webpack"></span> <p>Webpack</p></li>
@@ -45,7 +45,7 @@ get_header(); ?>
 					</ul>
 					<div id="text-site">
 						<p>Originally this site was made with Gulp, Compass, and breakpoint; but I switched to webpack to familiarize myself with it. Even though webpack might be overkill and not needed for a wordpress site, it has taken care of everything I needed. It replaces Gulp.  Sass-loader comes with basic Compass. And I can use sass without breakpoint.</p>
-						<p>Another reason for switching to webpack is to use it with ReactJS and start learning a new framework.</p>
+						<p>Another benefit of switching to webpack is to transition into and to learn ReactJS.</p>
 					</div>
 				</div>
 			</section>
@@ -54,7 +54,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="left">
 						<h2 class="title-programs">Programs</h2>
-						<div id="text-site">
+						<div id="text-programs">
 							<p>These are a few programs that I am familiar with. I am not an expert with them, but I do use them on a regular basis. Each of them are tools and used for different situations. Currently I use Photoshop, Premiere and Lightroom the most.</p>
 						</div>
 						<ul>
@@ -67,26 +67,44 @@ get_header(); ?>
 						</ul>
 					</div>
 					<div class="right">
-						<img src="<?php echo get_stylesheet_directory_uri();?>/images/about/about-programs.jpg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/src/images/about/about-programs-compressed.jpg" alt="">
 					</div>
 				</div>
 			</section>
 
-			<section id="about-resources">
-				<h1 class="title-resources">Online Resources</h1>
-				<p class="text-resources">I use many different resources from the internet, but a few that I use on a regular basis are:</p>
-					<ul>
-						<li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed</a></li>
-						<li><a href="https://gtmetrix.com/" target="_blank">GT Metrix</a></li>
-						<li><a href="https://compressor.io/" target="_blank">Image Compressor</a></li>
-						<li><a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">SVG Optimiser</a></li>
-						<li><a href="https://color.adobe.com/explore/most-popular/?time=all" target="_blank">Adobe Color</a></li>
-					</ul>
+			<section id="about-cameras">
+				<div class="row">
+					<h1 class="title-resources">Online Resources</h1>
+
+					<div class="camera">
+						<div class="left">
+							<span class="icon dslr"></span>
+							<h3>DSLR</h3>
+						</div>
+						<div class="right">
+							<ul>
+								<li>Canon T2i Rebel</li>
+								<li>Canon 6D</li>
+								<li>Nikon D610</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="camera">
+						<div class="left">
+							<span class="icon video"></span>
+							<h3>Video</h3>
+						</div>
+						<div class="right">
+							<ul>
+								<li>Canon XHA1</li>
+								<li>Canon XLH1</li>
+								<li>Canon XF305</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</section>
-
-
-
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

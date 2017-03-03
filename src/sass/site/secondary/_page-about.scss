@@ -1,6 +1,7 @@
 .page-about{
 	#about-main{
 		@include clearfix();
+		position: relative;
 		padding: 3em 5% 0;
 
 		.row{
@@ -8,25 +9,28 @@
 			@include container(1000px);
 			
 			#text-main{
-				@include span(4 of 10 0);
+				@include span(12 of 12 0);
+				@media screen and (min-width: $mobile-width){ @include span(4 of 10 0); }
 				h1{ font-size: 4em; letter-spacing: -3px; margin: 0 0 0.2em; padding: 0; line-height: 1.2em; }
 				p{ margin: 0 0 1em; padding: 0; }
 				.intro{
 					font-size: 1.2em;
 					line-height: 1.35em;
-					margin: 0;
+					margin: 0 0 1em;
 					padding: 0;
 					color: $gray2;
 				}
 			}
 			#img-main{
-				@include span(6 of 10 0);
+				@include span(12 of 12 0);
+				@media screen and (min-width: $mobile-width){ @include span(6 of 10 0); }
 			}
 		} //.row
 	} //#about-main
 
 	#about-site{
 		@include clearfix();
+		position: relative;
 		padding: 3em 5%;
 		background-color: #fafafa;
 		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
@@ -38,15 +42,16 @@
 
 			#title-site{
 				@include span(12);
-				text-align: left;
-				@media screen and (min-width: $mobile-width){ @include span(4.8); text-align: right; }
+				font-size: 2em;
+				margin: 0 0 0.5em;
+				@media screen and (min-width: $mobile-width){ @include span(4.8 last); }
 			}
 
 			#text-site{
-				@include span(12);	
-				text-align: left;
-				color: $gray2;
-				@media screen and (min-width: $mobile-width){ @include span(4.8); text-align: right; }
+				@include span(12);
+				color: $gray3;
+				@media screen and (min-width: $mobile-width){ @include span(4.8 last); }
+				p { margin: 0 0 1em; }
 			}
 
 			#icon-site{
@@ -56,7 +61,7 @@
 				list-style: none;
 				overflow: auto;
 
-				@media screen and (min-width: $mobile-width){ @include span(7.2 no-gutters last); }
+				@media screen and (min-width: $mobile-width){ @include span(7.2 no-gutters); }
 
 				li{
 					@include span(4 of 12 0);
@@ -67,8 +72,8 @@
 						display: block;
 						margin: 0 auto 0.5em;
 
-						@include about-icons(300px);
-						@media screen and (min-width: $tablet-width){ @include about-icons(400px); }
+						@include about-icons(300px, 375px);
+						@media screen and (min-width: $tablet-width){ @include about-icons(400px, 500px); }
 					} //icon
 
 					p{
@@ -82,149 +87,86 @@
 
 	#about-programs{
 		@include clearfix();
+		position: relative;
 		padding: 3em 5%;
+		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+		border-bottom: #dddddd solid 1px;
 
 		.row{
 			@include clearfix();
 			@include container(1100px);
-			display: flex;
+			@media screen and (min-width: $mobile-width){ display: flex; }
 
 			.left{
-				@include span(4 of 10);
+				@include span(10 of 10 split);
+				@media screen and (min-width: $mobile-width){ @include span(5 of 10); }
 
+				.title-programs{
+					font-size: 2em;
+					margin: 0 0 0.5em;
+				}
+				.text-programs{
+					margin: 0 0 1em;
+				}
 				ul{
 					display: block;
-					margin:0 auto;
+					margin:0 auto 0;
 					padding: 0;
-					text-align: center;
 					list-style: none;
 
 					li.icon{
 						display: inline-block;
 						@include programs-icons(150px);
-					} 
-					
+					} 	
 				}
-
-				
 			}
 
 			.right{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				@include span(6 of 10 last);
+				@include span(10 of 10 0);
+				@media screen and (min-width: $mobile-width){ @include span(5 of 10 last); }
 
 				img{ margin-left: auto; }
+			}
+		}
+	}
+
+
+	#about-cameras{
+		@include clearfix();
+		position: relative;
+		padding: 3em 5%;
+		background-color: #38c49f;
+		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+		border-bottom: #dddddd solid 1px;
+
+		.row{
+			@include clearfix();
+			@include container(1000px);
+
+			.camera{
+				@include span(5 of 10 0);
+
+				.left{
+					display: block;
+					margin:0 auto 0;
+					padding: 0;
+					list-style: none;
+
+					.icon{
+						display: block;
+						margin: 0 auto 0.5em;
+						@include about-icons(400px, 500px);
+					}
+
+				}
 			}
 		}
 	}
 } //page-about
 
 
-
-
-
-
-
-//MISCELLANEOUS
-.miscellaneous{
-	@include clearfix();
-	margin: 0 calc((-100vw + #{span(12 no-gutters)}) / 2);
-	padding: 1.5em 0;
-	background-color: $darkblue2;
-
-	.misc-wrapper{
-		display: flex;
-		flex-wrap: wrap;
-		position: relative;
-		max-width: 1600px;
-		margin: 0 auto;
-
-		.programs,
-		.cameras,
-		.extralinks{
-			display: flex;
-			justify-content: center;
-			flex: 0 0 100%;
-		    padding: 1em 0;
-			text-align: center;
-			@media screen and (min-width: $tablet-width){ text-align: left; }
-
-			@media screen and (min-width: $mobile-width){ flex: 1 1 33%; }
-
-			.misc-content{
-				max-width: 240px;
-				padding: 0 1em;
-				position: relative;
-
-				.misc-title{ 
-					display: inline; 
-					position: relative;
-					font-size: 1.6em; 
-					line-height: 1.15em; 
-					font-weight: 700; 
-					margin: 0 0 0.5em 1.25em; 
-					color: $white1;  
-					text-shadow: 3px 3px 2px $black2; 
-
-					@media screen and (min-width: $tablet-width){ display: inline-block;  }
-
-					.misc-icon{ 
-						display: inline-block;
-						position: absolute;
-						left: -1.25em;
-						color: darken($green2, 5%);
-					}
-				}
-
-				.misc-text{ font-size: 0.9em; line-height: 1.25em; margin-bottom: 1em; color: $gray1; }
-
-				ul{
-					margin: 0;
-					padding: 0;
-					color: $white3;
-					list-style: none;
-
-					a { color: $white3; text-decoration: none; &:hover{ text-decoration: underline; }}
-				} // ul
-			} //list-content
-		}
-
-		.programs{
-			ul{
-				@include clearfix();
-				display: block;
-				max-width: 200px;
-				margin: 0 auto;
-
-				li{
-					@include span(1 of 3 split);
-					padding-bottom: gutters(4);
-
-					.adobe{
-						display: block;
-						background-image: url('../images/about/adobe-compressed.png');
-						background-size: 150px;
-						width: 50px;
-						height: 50px;
-
-						&.photoshop{ 		background-position: 0 0; }
-						&.lightroom{ 		background-position: -50px 0; }
-						&.illustrator{ 		background-position: -100px 0; }
-						&.premiere{ 		background-position: 0 -50px; }
-						&.after-effects{ 	background-position: -50px -50px; }
-						&.audition{ 		background-position: -100px -50px; }		
-					} //adobe
-				} //li
-			} //ul
-		} //programs
-
-		@media screen and (min-width: $mobile-width){ 
-			flex-wrap: nowrap;
-			.programs, .cameras, .extralinks{ flex: 1 1 33%;  }
-		}
-	} //misc-wrapper
-} //miscellaneous
 
 

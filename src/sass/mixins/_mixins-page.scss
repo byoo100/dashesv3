@@ -109,28 +109,32 @@
 }
 
 
-@mixin about-icons($size){
-  $val: calc(#{$size} / 4);
+@mixin about-icons($width, $height){
+  $w: calc(#{$width} / 4); 
+  $h: calc(#{$height} / 5); 
 
   background-image: url('../images/about/brian-icons-compressed.png');
   background-repeat: no-repeat;
-  background-size: $size;
-  width: $val; 
-  height: $val; 
+  background-size: $width;
+  width: $w; 
+  height: $h; 
   
   &.gulp{       background-position: 0 0; }
-  &.webpack{    background-position: 0 calc(#{$val} * -1); }
-  &.wordpress{  background-position: 0 calc(#{$val} * -2); }
-  &.sublime{    background-position: 0 calc(#{$val} * -3); }
-  &.sass{       background-position: calc(#{$val} * -1) 0; }
-  &.github{     background-position: calc(#{$val} * -1) calc(#{$val} * -1); }
-  &.underscore{ background-position: calc(#{$val} * -1) calc(#{$val} * -2); }
-  &.susy{       background-position: calc(#{$val} * -2) 0; }
-  &.gitbash{    background-position: calc(#{$val} * -2) calc(#{$val} * -1); }
-  &.acf{        background-position: calc(#{$val} * -2) calc(#{$val} * -2); }
-  &.compass{    background-position: calc(#{$val} * -3) 0; }
-  &.mamp{       background-position: calc(#{$val} * -3) calc(#{$val} * -1); }
-  &.swiper{     background-position: calc(#{$val} * -3) calc(#{$val} * -2); }
+  &.webpack{    background-position: 0 calc(#{$h} * -1); }
+  &.wordpress{  background-position: 0 calc(#{$h} * -2); }
+  &.sublime{    background-position: 0 calc(#{$h} * -3); }
+  &.sass{       background-position: calc(#{$w} * -1) 0; }
+  &.github{     background-position: calc(#{$w} * -1) calc(#{$h} * -1); }
+  &.underscore{ background-position: calc(#{$w} * -1) calc(#{$h} * -2); }
+  &.susy{       background-position: calc(#{$w} * -2) 0; }
+  &.gitbash{    background-position: calc(#{$w} * -2) calc(#{$h} * -1); }
+  &.acf{        background-position: calc(#{$w} * -2) calc(#{$h} * -2); }
+  &.compass{    background-position: calc(#{$w} * -3) 0; }
+  &.mamp{       background-position: calc(#{$w} * -3) calc(#{$h} * -1); }
+  &.swiper{     background-position: calc(#{$w} * -3) calc(#{$h} * -2); }
+
+  &.dslr{       background-position: 0 calc(#{$h} * -4); }
+  &.video{      background-position: calc(#{$w} * -1) calc(#{$h} * -4); }
 }
 
 @mixin programs-icons($size){
