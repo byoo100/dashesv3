@@ -137,30 +137,70 @@
 	#about-cameras{
 		@include clearfix();
 		position: relative;
-		padding: 3em 5%;
-		background-color: #38c49f;
+		padding: 5em 5%;
+		background-color: $darkblue2;
 		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-		border-bottom: #dddddd solid 1px;
+		border-bottom: lighten($darkblue2, 10%) solid 1px;
 
 		.row{
 			@include clearfix();
 			@include container(1000px);
 
 			.camera{
-				@include span(5 of 10 0);
+				@include span(10 of 10 0);
+				margin: 0 auto 2em;
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+				padding: 3em 5%;
+				background-color: $teal2;
+				border-radius: 15px;
+				box-shadow: 3px 3px 10px #000;
+				text-align: center;
+				
+				
+
+				@media screen and (min-width: 700px){ 
+					@include span(4.5 of 10 0); margin-right: 
+					span(1 of 10 0); 
+					margin-bottom: 0; 
+					&:last-child{ margin-right: 0; }
+				}
+
+				
 
 				.left{
+					@include span(4 of 10 0);
 					display: block;
-					margin:0 auto 0;
+					margin:0 auto;
 					padding: 0;
 					list-style: none;
 
 					.icon{
 						display: block;
-						margin: 0 auto 0.5em;
+						margin: 0 auto;
 						@include about-icons(400px, 500px);
 					}
 
+					h2{
+						margin: 0;
+						color: #f2f2f2;
+					}
+
+				}
+
+				.right{
+					@include span(6 of 10 0 last);
+
+					ul{
+						font-size: 1.25em;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						color: #ddd;
+						text-align: center;
+					}
 				}
 			}
 		}

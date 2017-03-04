@@ -74,12 +74,10 @@ get_header(); ?>
 
 			<section id="about-cameras">
 				<div class="row">
-					<h1 class="title-resources">Online Resources</h1>
-
 					<div class="camera">
 						<div class="left">
 							<span class="icon dslr"></span>
-							<h3>DSLR</h3>
+							<h2>DSLR</h2>
 						</div>
 						<div class="right">
 							<ul>
@@ -93,7 +91,7 @@ get_header(); ?>
 					<div class="camera">
 						<div class="left">
 							<span class="icon video"></span>
-							<h3>Video</h3>
+							<h2>VIDEO</h2>
 						</div>
 						<div class="right">
 							<ul>
