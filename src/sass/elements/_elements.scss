@@ -22,9 +22,11 @@ blockquote, q {
 }
 
 blockquote {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.6em;
-    margin: 1.5em 0 1.5em 2em;
+    margin: 1.5em 2em 1.5em;
+    color: #505050;
+    font-style: italic;
     position: relative;
 
     &::before {
@@ -32,7 +34,7 @@ blockquote {
 	    content: "\f10d";
 	    position: absolute;
 	    left: -2em;
-	    color: #ededed;
+	    color: #d0d0d0;
 	}
 }
 

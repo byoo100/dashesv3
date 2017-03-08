@@ -99,6 +99,7 @@
 
 			.left{
 				@include span(10 of 10 split);
+				text-align: center;
 				@media screen and (min-width: $mobile-width){ @include span(5 of 10); }
 
 				.title-programs{
@@ -109,8 +110,8 @@
 					margin: 0 0 1em;
 				}
 				ul{
-					display: block;
-					margin:0 auto 0;
+					display: inline-block;
+					margin:0 auto 1.5em;
 					padding: 0;
 					list-style: none;
 
@@ -137,7 +138,7 @@
 	#about-cameras{
 		@include clearfix();
 		position: relative;
-		padding: 5em 5%;
+		padding: 3em 5%;
 		background-color: $darkblue2;
 		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 		border-bottom: lighten($darkblue2, 10%) solid 1px;
@@ -145,6 +146,13 @@
 		.row{
 			@include clearfix();
 			@include container(1000px);
+
+			#text-cameras{
+				text-align: center;
+				margin-bottom: 1.5em;
+				h1{ margin: 0; color: #f2f2f2; }
+				p{ font-size: 1.2em; font-style: italic; margin: 0; color: $gray1; }
+			}
 
 			.camera{
 				@include span(10 of 10 0);
@@ -159,16 +167,12 @@
 				box-shadow: 3px 3px 10px #000;
 				text-align: center;
 				
-				
-
 				@media screen and (min-width: 700px){ 
 					@include span(4.5 of 10 0); margin-right: 
 					span(1 of 10 0); 
 					margin-bottom: 0; 
 					&:last-child{ margin-right: 0; }
 				}
-
-				
 
 				.left{
 					@include span(4 of 10 0);
@@ -198,7 +202,7 @@
 						list-style: none;
 						margin: 0;
 						padding: 0;
-						color: #ddd;
+						color: #fff;
 						text-align: center;
 					}
 				}

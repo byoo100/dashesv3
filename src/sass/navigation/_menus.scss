@@ -1,3 +1,11 @@
+#site-navigation .mobile-list li a[href*="brian-yoo.com/"]::before { content: '\f015'; }
+#site-navigation .mobile-list li a[href*="brian-yoo.com/projects"]::before { content: '\f03e'; }
+#site-navigation .mobile-list li a[href*="brian-yoo.com/photography"]::before { content: '\f030'; }
+#site-navigation .mobile-list li a[href*="brian-yoo.com/media"]::before { content: '\f03d'; }
+#site-navigation .mobile-list li a[href*="brian-yoo.com/about"]::before { content: '\f007'; }
+#site-navigation .mobile-list li a[href*="brian-yoo.com/contact"]::before { content: '\f0e0'; }
+
+
 #social-list li a[href*="facebook.com"]::before { content: '\f082' !important; }
 #social-list li a[href*="twitter.com"]::before { content: '\f099' !important; }
 #social-list li a[href*="dribbble.com"]::before { content: '\f17d' !important; }
@@ -144,7 +152,7 @@
 	} //social-list
 	
 
-	// MENU BAR
+	// MOBILE MENU BAR
 	.mobile-menubar{
 		@include clearfix();
 		display: block;
@@ -285,15 +293,16 @@
 		ul.mobile-list{
 			li{
 				a{
+					padding-left: 2.5em;
 					line-height: 3em;
 					border-bottom: 1px solid lighten($darkblue1, 10%);
 
-					.icon:before{
-						display: inline-block;
+					&:before{
+						display: block;
+						position: absolute;
 						font-family: 'fontawesome';
 						content: '';
-						font-size: 1.1em;
-						padding-right: 0.5em;
+						margin-left: -1.5em;
 					}
 				} //li > a
 
@@ -305,9 +314,7 @@
 					ul.sub-menu{
 						li{ 
 							a{ 
-								padding-left: 2em; 
-
-
+								padding-left: 3.5em;
 							}
 						}
 					} //li > ul.sub-menu

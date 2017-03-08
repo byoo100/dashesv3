@@ -40,9 +40,7 @@
             
             <?php wp_nav_menu( array( 
                 'theme_location' => 'primary', 
-                'menu_class' => 'mobile-list',
-                'link_before' => '<span class=icon>',
-                'link_after' => '</span>'
+                'menu_class' => 'mobile-list'
             ) ); ?>
 
             <?php wp_nav_menu( array( 

@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="row">
 					<div id="text-main">
 						<h1>about me</h1>
-						<p class="intro">Aspiring Web Developer, Freelance Videographer, Photograhy Enthusiast</p>
+						<p class="intro">Web Developer, Videographer, Photograhy Enthusiast</p>
 						<p>I enjoy the creativeness in the web development process. I also enjoy working with cameras and seeing how far I can push the hardware.</p>
 					</div>
 					<div id="img-main"><img src="<?php echo get_stylesheet_directory_uri(); ?>/src/images/about/about-brian-compressed.jpg"></div>
@@ -74,6 +74,11 @@ get_header(); ?>
 
 			<section id="about-cameras">
 				<div class="row">
+					<div id="text-cameras">
+						<h1>CAMERAS</h1>
+						<p class="intro">that I've used</p>
+					</div>
+					
 					<div class="camera">
 						<div class="left">
 							<span class="icon dslr"></span>
