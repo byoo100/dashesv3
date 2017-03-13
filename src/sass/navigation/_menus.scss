@@ -52,7 +52,7 @@
 				position: relative;
 				font-size: 18px;
 				font-size: 1.125rem;
-				padding: 0 1em;
+				padding: 0 0.5em;
 				letter-spacing: 1px;
 				color: $white1;
 				text-decoration: none;
@@ -131,7 +131,6 @@
 				a{
 					display: inline-block;
 					position: relative;
-					margin-right: 1.25em;
 					color: $white1;
 					text-decoration: none;
 
@@ -148,6 +147,7 @@
 					}
 				}
 			} //list-style
+			@media screen and (min-width: $tablet-width){ margin-left: 1em; }
 		} //ul
 	} //social-list
 	
