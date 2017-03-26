@@ -1,11 +1,11 @@
-<?php 
+<?php
     // Sets variables for Icons and Colors based on Post Type
     $type = get_post_type();
 
     if ( is_single() && $type == 'post' ){ $border = "border-post"; }
     elseif ( is_single() && $type == 'projects' ){ $border = "border-projects"; }
     elseif ( is_single() && $type == 'photography' ){ $border = "border-photography"; }
-    elseif ( is_single() && $type == 'media' ){ $border = "border-media"; }
+    elseif ( is_single() && $type == 'mediawork' ){ $border = "border-media"; }
 ?>
 
 
@@ -13,7 +13,7 @@
 
     <nav id="site-navigation" class="main-navigation <?php echo $border ?>" role="navigation">
 
-        <?php 
+        <?php
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         ?>
@@ -37,14 +37,14 @@
                     <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
                 </div>
             </div>
-            
-            <?php wp_nav_menu( array( 
-                'theme_location' => 'primary', 
+
+            <?php wp_nav_menu( array(
+                'theme_location' => 'primary',
                 'menu_class' => 'mobile-list'
             ) ); ?>
 
-            <?php wp_nav_menu( array( 
-                'theme_location' => 'social', 
+            <?php wp_nav_menu( array(
+                'theme_location' => 'social',
                 'container' => 'div',
                 'container_id' => 'social-list',
                 'link_before' => '<span class=screen-reader-text>',
@@ -64,14 +64,14 @@
             </div><!-- .desktop-icon -->
 
             <div class="grid-container">
-                <?php wp_nav_menu( array( 
-                    'theme_location' => 'primary', 
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'primary',
                     'container' => 'none',
                     'menu_class' => 'desktop-list'
                 ) ); ?>
 
-                <?php wp_nav_menu( array( 
-                    'theme_location' => 'social', 
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'social',
                     'container' => 'div',
                     'container_id' => 'social-list',
                     'link_before' => '<span class=screen-reader-text>',

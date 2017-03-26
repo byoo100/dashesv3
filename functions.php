@@ -57,8 +57,8 @@ function dashesv3_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1280, 720, true ); //16:9 image
-	add_image_size( 'mobile-thumb', 320, 180, true ); 
-	add_image_size( 'tablet-thumb', 640, 360, true ); 
+	add_image_size( 'mobile-thumb', 320, 180, true );
+	add_image_size( 'tablet-thumb', 640, 360, true );
 	add_image_size( 'large-thumb', 1920, 1080, true ); //16:9
 
 	// This theme uses wp_nav_menu() in one location.
@@ -138,6 +138,8 @@ function dashesv3_scripts() {
 	wp_register_script( 'jquery-migrate.min', includes_url( '/js/jquery/jquery-migrate.min.js' ), false, NULL, true );
 	wp_enqueue_script( 'jquery-migrate.min' );
 
+	wp_enqueue_script( 'wp-api' );
+
 	wp_enqueue_script( 'dashesv3-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array(), '20151215', true );
 
 	/**
@@ -159,7 +161,7 @@ function dashesv3_scripts() {
         'close'     =>  __( 'close', 'dashesv3' ),
         'xhrError'  =>  __( 'This content failed to load.', 'dashesv3' ),
         'imgError'  =>  __( 'This image failed to load.', 'dashesv3' )
-      ) 
+      )
     );
 
 
@@ -217,11 +219,11 @@ function my_ajax_pagination() {
 
     query_posts( $query_vars );
 
-    if( ! have_posts() ) { 
+    if( ! have_posts() ) {
         get_template_part( 'content', 'none' );
     }
     else {
-        while ( have_posts() ) { 
+        while ( have_posts() ) {
             the_post();
 
             get_template_part( 'template-parts/content', 'index' );
@@ -245,7 +247,7 @@ function remove_default_image_sizes( $sizes) {
     unset( $sizes['medium']);
     unset( $sizes['medium_large']);
     unset( $sizes['large']);
-     
+
     return $sizes;
 }
 add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes');
@@ -283,7 +285,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 http://inspirationalpixels.com/snippets/add-post-type-to-main-loop
 function add_post_types_to_loop($query) {
     if ($query->is_main_query() && $query->is_home() || $query->is_category() || $query->is_author()) {
-        $query->set('post_type', array('post', 'projects', 'photography', 'media'));
+        $query->set('post_type', array('post', 'projects', 'photography', 'mediawork'));
     }
 }
 add_action('pre_get_posts', 'add_post_types_to_loop');
@@ -299,5 +301,3 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
-
-

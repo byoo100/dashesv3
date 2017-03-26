@@ -1,6 +1,6 @@
-<?php 
+<?php
     // Sets border color for Content Switcher
-	
+
 
 ?>
 
@@ -22,8 +22,8 @@
 			<a class="post-content-link border-photography <?php echo $current ?>" href="<?php echo get_home_url(null, 'photography#post-content-anchor'); ?>">Photography</a>
 		</li>
 		<li class="post-content-item">
-			<?php $current = is_post_type_archive('media') ? 'current' : '' ?>
-			<a class="post-content-link border-media <?php echo $current ?>" href="<?php echo get_home_url(null, 'media#post-content-anchor'); ?>">Media</a>
+			<?php $current = is_post_type_archive('mediawork') ? 'current' : '' ?>
+			<a class="post-content-link border-media <?php echo $current ?>" href="<?php echo get_home_url(null, 'mediawork#post-content-anchor'); ?>">Media</a>
 		</li>
 	</ul>
 </section>

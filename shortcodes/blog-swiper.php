@@ -1,14 +1,14 @@
 <!-- SLIDER -->
 <section id="featured-posts">
 
-<?php 
+<?php
     //==================================
     // GATHERS THE INFO FOR RECENT POSTS
     //==================================
     global $swiper_query;
 	$i = 0;
 	$numPosts = '3';
-    $args = array( 'post_type' => array('post', 'projects', 'photography', 'media'), 'posts_per_page' => $numPosts, 'ignore_sticky_posts' => '1' );
+    $args = array( 'post_type' => array('post', 'projects', 'photography', 'mediawork'), 'posts_per_page' => $numPosts, 'ignore_sticky_posts' => '1' );
 	$swiper_query = new WP_Query( $args );
 
 	while( $swiper_query->have_posts() ){
@@ -47,7 +47,7 @@
         <?php } ?>
 
     </div> <!-- .swiper-wrapper -->
-    
+
 </div> <!-- .swiper-background -->
 
 </section>

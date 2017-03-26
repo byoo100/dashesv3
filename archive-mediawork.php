@@ -25,12 +25,12 @@ get_header(); ?>
 			<section id="article-index">
 
 				<?php
-				$args = array( 'post_type' => 'media' );
+				$args = array( 'post_type' => 'mediawork' );
 				$args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
 				query_posts( $args );
 
-				if ( have_posts() ) : 
+				if ( have_posts() ) :
 
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
@@ -46,7 +46,7 @@ get_header(); ?>
 
 					dashesv3_paging_nav();
 
-					wp_reset_query(); 
+					wp_reset_query();
 
 				else :
 
