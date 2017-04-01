@@ -301,3 +301,47 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+
+
+
+
+
+//Easier to access Featured Images from WP REST API
+//http://stackoverflow.com/questions/33320227/wp-rest-api-angularjs-how-to-grab-featured-image-for-display-on-page
+//
+//Get image URL
+function get_thumbnail_url($post){
+
+	$imgSizes = array('post-thumbnail', 'mobile-thumb', 'tablet-thumb', 'large-thumb');
+
+	for($x = 0; $x < count($imgSizes); $x++){
+
+		if(has_post_thumbnail($post['id'])){
+				$imgArray = wp_get_attachment_image_src( get_post_thumbnail_id( $post['id'] ), $imgSizes[$x] ); // replace 'full' with 'thumbnail' to get a thumbnail
+				$imgURL[$x] = $imgArray[0];
+		} else {
+				return false;
+		}
+	}
+	return $imgURL;
+}
+//integrate with WP-REST-API
+function insert_thumbnail_url() {
+
+	$postTypes = array('post', 'projects', 'photography', 'mediawork');
+
+	for($x = 0; $x < count($postTypes); $x++){
+		register_rest_field( $postTypes[$x],
+												 'featured_image',  //key-name in json response
+													array(
+														'get_callback'    => 'get_thumbnail_url',
+														'update_callback' => null,
+														'schema'          => null,
+														)
+												);
+	}
+}
+//register action
+add_action( 'rest_api_init', 'insert_thumbnail_url' );
