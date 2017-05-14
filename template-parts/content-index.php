@@ -21,6 +21,7 @@
 
 	<section class="article-content">
 		<?php the_title( sprintf( '<span class="article-title index-excerpt"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></span>' ); ?>
+
 		<span class="article-text">
 			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 				<?php echo get_the_excerpt(); ?>
