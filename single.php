@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<?php 
+	<?php
 		// Sets variables for Icons and Colors based on Post Type
 		$type = get_post_type();
 
@@ -30,11 +30,11 @@ get_header(); ?>
 
 		        	$video = get_sub_field('video');
 
-		        elseif( get_row_layout() == 'featured_gallery' ): 
+		        elseif( get_row_layout() == 'featured_gallery' ):
 
 		        	$gallery = get_sub_field('gallery');
 
-		        elseif( get_row_layout() == 'side_content' ): 
+		        elseif( get_row_layout() == 'side_content' ):
 
 		        	$side_title[$i] = get_sub_field('side_title');
 		        	$side_text[$i] = get_sub_field('side_text');
@@ -64,7 +64,7 @@ get_header(); ?>
 			</section>
 
 
-			<?php 
+			<?php
 			//=================
 			// FEATURED SECTION
 			//=================
@@ -85,7 +85,7 @@ get_header(); ?>
 						echo "<div class=featured-gallery>";
 						echo $gallery;
 						echo "</div>";
-					endif; 
+					endif;
 
 				else :
 					if ( has_post_thumbnail() ) :
@@ -93,13 +93,13 @@ get_header(); ?>
 						the_post_thumbnail();
 					echo "</div>";
 					endif;
-				endif; 
+				endif;
 
 				echo "</section>";
 			?>
 
 
-			<?php 
+			<?php
 			//================
 			// SIDEBAR SECTION
 			//================
@@ -135,7 +135,7 @@ get_header(); ?>
 
 				echo "</section>";
 			?>
-		
+
 		<?php endif; // End If (main loop)?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

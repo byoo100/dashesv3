@@ -65,9 +65,9 @@
 
 
 
-@mixin order($val) {     
-  -ms-flex-order: $val;     
-   -webkit-order: $val;  
+@mixin order($val) {
+  -ms-flex-order: $val;
+   -webkit-order: $val;
            order: $val;
 }
 
@@ -92,6 +92,7 @@
   &.border-projects { outline: 0.4em solid $color_projects; }
   &.border-photography { outline: 0.4em solid $color_photography; }
   &.border-media { outline: 0.4em solid $color_media; }
+  &.border-mediawork { outline: 0.4em solid $color_media; }
 }
 
 @mixin post-link-color(){
@@ -99,6 +100,7 @@
   &.color-projects > a { color: $color_projects; }
   &.color-photography > a { color: $color_photography; }
   &.color-media > a { color: $color_media; }
+  &.color-mediawork > a { color: $color_media; }
 }
 
 @mixin post-type-color(){
@@ -106,19 +108,20 @@
   &.color-projects { color: $color_projects; }
   &.color-photography { color: $color_photography; }
   &.color-media { color: $color_media; }
+  &.color-mediawork { color: $color_media; }
 }
 
 
 @mixin about-icons($width, $height){
-  $w: calc(#{$width} / 4); 
-  $h: calc(#{$height} / 5); 
+  $w: calc(#{$width} / 4);
+  $h: calc(#{$height} / 5);
 
   background-image: url('../images/about/brian-icons-compressed.png');
   background-repeat: no-repeat;
   background-size: $width;
-  width: $w; 
-  height: $h; 
-  
+  width: $w;
+  height: $h;
+
   &.gulp{       background-position: 0 0; }
   &.webpack{    background-position: 0 calc(#{$h} * -1); }
   &.wordpress{  background-position: 0 calc(#{$h} * -2); }
@@ -139,13 +142,13 @@
 
 @mixin programs-icons($size){
   $val: calc(#{$size} / 3);
-  
+
   background-image: url('../images/about/adobe-compressed.png');
   background-repeat: no-repeat;
   background-size: $size;
-  width: $val; 
-  height: $val; 
-  
+  width: $val;
+  height: $val;
+
   &.photoshop{      background-position: 0 0; }
   &.premiere{       background-position: 0 calc(#{$val} * -1); }
   &.lightroom{      background-position: calc(#{$val} * -1) 0; }

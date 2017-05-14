@@ -1,13 +1,9 @@
 <?php
     // Sets border color for Content Switcher
-
-
 ?>
 
-
-
 <section id="post-content-switcher">
-<div id="post-content-anchor"></div>
+	<div id="post-content-anchor"></div>
 	<ul class="post-content-list">
 		<li class="post-content-item">
 			<?php $current = is_home() ? 'current' : '' ?>
