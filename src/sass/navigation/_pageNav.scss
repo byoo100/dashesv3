@@ -8,7 +8,7 @@
 		margin: 0 auto;
 		padding: 0 .4em;
 
-		@media screen and (min-width: $mobile-cutoff) { 
+		@media screen and (min-width: $mobile-cutoff) {
 			display: flex;
 			justify-content: space-between;
 			align-items: stretch;
@@ -18,7 +18,7 @@
 		.nav-previous {
 			margin-bottom: 1em;
 
-			@media screen and (min-width: $mobile-cutoff) { 
+			@media screen and (min-width: $mobile-cutoff) {
 				padding-bottom: 0;
 			}
 		}
@@ -112,7 +112,7 @@
 	}
 }
 
-@media screen and (min-width: $mobile-cutoff) { 
+@media screen and (min-width: $mobile-cutoff) {
 
 	.comment-navigation .nav-previous,
 	.post-navigation .nav-previous {
