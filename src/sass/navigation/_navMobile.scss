@@ -25,16 +25,15 @@
 
           #mobile-close{
               display: inline-block;
-              font-size: 1.4em;
+              font-size: 1.75em;
               padding: 0.25em 0.5em;
               font-family: $font-awesome;
               color: #fff;
               background-color: transparent;
               border: none;
 
-              &:before{
-                content: '\f00d';
-              }
+              &:before{ content: '\f00d'; }
+              &:hover{ background-color: darken($green3, 5%); }
           }//#mobile-close
       }//#mobile-pre
 
@@ -61,6 +60,9 @@
             list-style: none;
 
             li{
+              display: block;
+              position: relative;
+
                 a{
                     display: block;
                     font-size: 1.25em;
@@ -69,8 +71,38 @@
                     text-decoration: none;
                     text-align: center;
 
-                    &:hover{ background-color: $green3; }
+                    &:hover{ background-color: darken($green3, 5%); }
                 }//a
+
+                .dropdown-toggle{
+                    display: block;
+                    position: absolute;
+                    font-size: 1.4em;
+                    padding: 0.25em 0.5em;
+                    top: 7px;
+                    right: 1em;
+                    font-family: $font-awesome;
+                    color: #fff;
+                    background-color: transparent;
+                    border: 1px solid #eee;
+
+                    &:hover{
+                      background-color: $blue1;
+                    }
+
+                    &:before{
+                      content: '\f0d7';
+                    }
+                }//.dropdown-toggle
+
+                .sub-menu{
+                  display: none;
+                  position: relative;
+                  margin: 0;
+                  padding: 0;
+                  background-color: $darkblue2;
+                  z-index: 9999;
+                }
             }//li
         }//.mobile-list
 
@@ -84,13 +116,17 @@
                 display: inline-block;
 
                 a{
-                    font-size: 1.5em;
-                    margin-right: 0.25em;
+                    font-size: 1.85em;
+
                     color: #fff;
                     text-decoration: none;
                     &:before{ font-family: $font-awesome; }
                     &:hover{ color: $blue1; }
+
                 }//a
+
+                margin-right: 0.5em;
+                &:last-child{ margin-right: 0; }
             }//li
         }//ul.social-list
 
@@ -105,7 +141,7 @@
         font-size: 1.6em;
         top: 1em;
         right: 1em;
-        padding: 0.25em 0.5em;
+        padding: 0.35em 0.5em;
         color: #fff;
         background-color: rgba(28, 52, 76, 0.5);
         border: none;

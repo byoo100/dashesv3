@@ -6,7 +6,7 @@
 	<div id="post-content-anchor"></div>
 	<ul class="post-content-list">
 		<li class="post-content-item">
-			<?php $current = is_home() ? 'current' : '' ?>
+			<?php $current = is_front_page() ? 'current' : '' ?>
 			<a class="post-content-link border-post <?php echo $current ?>" href="<?php echo get_home_url(null, '#post-content-anchor'); ?>">Blog</a>
 		</li>
 		<li class="post-content-item">

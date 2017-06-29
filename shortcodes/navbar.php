@@ -2,10 +2,10 @@
     // Sets variables for Icons and Colors based on Post Type
     $type = get_post_type();
 
-    if ( is_single() && $type == 'post' ){ $border = "border-post"; }
-    elseif ( is_single() && $type == 'projects' ){ $border = "border-projects"; }
-    elseif ( is_single() && $type == 'photography' ){ $border = "border-photography"; }
-    elseif ( is_single() && $type == 'mediawork' ){ $border = "border-media"; }
+    if ( is_singular( 'post' ) ){ $border = "border-post"; }
+    elseif ( is_singular( 'projects' ) ){ $border = "border-projects"; }
+    elseif ( is_singular( 'photography' ) ){ $border = "border-photography"; }
+    elseif ( is_singular( 'mediawork' ) ){ $border = "border-media"; }
 ?>
 
 
@@ -42,7 +42,7 @@
     <button id="mobile-open"></button>
     <div id="dark-overlay"></div>
 
-    <section id="desktop-main">
+    <section id="desktop-main" <?php echo $border ? 'class="'.$border.'"' : ''; ?> >
           <main id="desktop-pre">
               <div class="desktop-pre-wrapper">
                   <?php wp_nav_menu( array(
@@ -55,7 +55,12 @@
               </div>
           </main><!-- #desktop-pre -->
 
-          <main id="desktop-menu">
+        <?php if( is_front_page() || is_archive( 'projects', 'photography', 'mediawork' ) ) {
+          echo '<main id="desktop-menu" class="desktop-float">';
+        } else {
+          echo '<main id="desktop-menu">';
+        } ?>
+
               <div class="desktop-menu-wrapper">
                   <div class="desktop-logo">
                       <object type="image/svg+xml" class="logo" style="max-width:100px; max-height:100px;" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
