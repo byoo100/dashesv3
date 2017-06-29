@@ -3,20 +3,20 @@
 	overflow: hidden;
 
 	.site-main{
-		@include container($container-small);
+		@include container($page-sm);
 		@include clearfix();
 		margin-top: 1em;
 		padding: 0 0.5em;
 
-		@media screen and (min-width: $mobile-width) { @include container($container-medium); margin-top: 2em; }
-		@media screen and (min-width: $tablet-width) { @include container($container-large); padding: 0; }
-		@media screen and (min-width: $desktop-width) { @include container($container-xlarge); padding: 0; }
+		@media screen and (min-width: $size-md) { @include container($page-md); margin-top: 2em; }
+		@media screen and (min-width: $size-lg) { @include container($page-lg); padding: 0; }
+		@media screen and (min-width: $size-xl) { @include container($page-xl); padding: 0; }
 	} //site-main
 } //content-area
 
 
-.featured-video { 
-	position: relative; 
+.featured-video {
+	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
@@ -25,18 +25,17 @@
 
 	& iframe,
 	& object,
-	& embed { 
+	& embed {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 	}
-} 
+}
 
 #loader{
 	display: block;
 	width: 31.25%;
 	height: 360px;
 }
-

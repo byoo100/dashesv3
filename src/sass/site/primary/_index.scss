@@ -3,15 +3,15 @@
 	width: 100%;
 	height: 100%;
 	background-color: $black1;
-	
+
 	.swiper-container{
 		display: block;
 	    position: relative;
 	    padding-bottom: 56.25%;
 	    background-color: $black1;
-	    @media screen and (min-width:$mobile-width){ padding-bottom: 40%; }
+	    @media screen and (min-width:$size-md){ padding-bottom: 40%; }
 	    @media screen and (min-width:1920px){ max-width: 1920px; }
-			
+
 	    .swiper-wrapper{
 	    	position: absolute;
 		    z-index: 1;
@@ -19,7 +19,7 @@
 		    right: 0;
 		    bottom: 0;
 		    left: 0;
-	    
+
 			.swiper-link{
 				position: absolute;
 				width: 80%;
@@ -27,13 +27,13 @@
 				left: 0;
 				bottom: 15%;
 				z-index: 5;
-				@media screen and (min-width:$mobile-width){ width: 50%; }
+				@media screen and (min-width:$size-md){ width: 50%; }
 
 				.swiper-tag{
 					font-size: 0.9em;
 			    	font-weight: 700;
 			    	@include post-type-color();
-			    	@media screen and (min-width:$desktop-width){ font-size: 1em; }
+			    	@media screen and (min-width:$size-xl){ font-size: 1em; }
 			    }
 
 			    .swiper-title{
@@ -46,8 +46,8 @@
 			    		text-decoration: none;
 			    		text-shadow: 3px 3px 3px #000;
 			    		&:hover{ text-decoration: underline; }
-					    @media screen and (min-width:$mobile-width){ font-size: 2.25em; }
-					    @media screen and (min-width:$desktop-width){ font-size: 3em; }
+					    @media screen and (min-width:$size-md){ font-size: 2.25em; }
+					    @media screen and (min-width:$size-xl){ font-size: 3em; }
 			    	}
 			    }
 
@@ -60,9 +60,9 @@
 				    		text-decoration: none;
 				    		text-shadow: 3px 3px 3px #000;
 				    		&:hover{ text-decoration: underline; }
-				    		@media screen and (min-width:$desktop-width){ font-size: 1em; }
+				    		@media screen and (min-width:$size-xl){ font-size: 1em; }
 					    }
-		    		@media screen and (min-width:$mobile-width){ display: block; }
+		    		@media screen and (min-width:$size-md){ display: block; }
 				}
 
 			} /*swiper-link*/
@@ -78,7 +78,7 @@
 			    top: 0;
 			    z-index: 2;
 
-			    @media screen and (min-width:$mobile-width){
+			    @media screen and (min-width:$size-md){
 			    	background-image: -webkit-gradient(linear,left top,right top,color-stop(0,$black1),color-stop(33%,transparent));
 				    background-image: -webkit-linear-gradient(left,$black1 0,transparent 40%);
 				    background-image: -webkit-linear-gradient(left,$black1 0,transparent 40%);
@@ -93,7 +93,7 @@
 			    right: 0;
 			    top: 0;
 			    z-index: 1;
-			    @media screen and (min-width:$mobile-width){
+			    @media screen and (min-width:$size-md){
 			    	height: 100%;
 			    }
 			}
@@ -110,8 +110,8 @@
 	#post-content-anchor{
 		position: relative;
 		top: -$mobileHeight;
-		@media screen and (min-width: $mobile-width) { top: -$tabletHeight; }
-		@media screen and (min-width: $tablet-width) { top: 0; }
+		@media screen and (min-width: $size-md) { top: -$tabletHeight; }
+		@media screen and (min-width: $size-lg) { top: 0; }
 	}
 
 	.post-content-list{
@@ -126,7 +126,7 @@
 			max-width: 160px;
 			display: block;
 			text-align: center;
-			
+
 			.post-content-link{
 				display: block;
 				font-size: 1.1em;
@@ -135,9 +135,9 @@
 				color: #a0a0a0;
 				text-decoration: none;
 
-				@media screen and (min-width: $mobile-width) { font-size: 1.15em; }
-				@media screen and (min-width: $tablet-width) { font-size: 1.25em; }
-				
+				@media screen and (min-width: $size-md) { font-size: 1.15em; }
+				@media screen and (min-width: $size-lg) { font-size: 1.25em; }
+
 				&.border-post:hover, &.border-post.current { border-bottom: 5px solid $color_post; color: #0f0f0f; }
 				&.border-projects:hover, &.border-projects.current { border-bottom: 5px solid $color_projects; color: #0f0f0f; }
 				&.border-photography:hover, &.border-photography.current { border-bottom: 5px solid $color_photography; color: #0f0f0f; }
@@ -172,12 +172,12 @@
 		border-radius: 2%;
 		overflow: hidden;
 
-		@media screen and (min-width: $mobile-width) and (max-width: $tablet-width) { -webkit-box-flex: 0; -ms-flex: 0 0 48.62%; flex: 0 0 48.62%; max-width: 48.62%; margin-right: 2.76%; margin-left: 0; &:nth-child(2n){ margin-right: 0; } }
-		@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) { -webkit-box-flex: 0; -ms-flex: 0 0 31.25%; flex: 0 0 31.25%; max-width: 31.25%; margin-right: 3.125%; margin-left: 0; &:nth-child(3n){ margin-right: 0; } }
-		@media screen and (min-width: $desktop-width) { -webkit-box-flex: 0; -ms-flex: 0 0 23.26%; flex: 0 0 23.26%; max-width: 23.26%; margin-right: 2.32%; margin-left: 0; &:nth-child(4n){ margin-right: 0; } }
+		@media screen and (min-width: $size-md) and (max-width: $size-lg) { -webkit-box-flex: 0; -ms-flex: 0 0 48.62%; flex: 0 0 48.62%; max-width: 48.62%; margin-right: 2.76%; margin-left: 0; &:nth-child(2n){ margin-right: 0; } }
+		@media screen and (min-width: $size-lg) and (max-width: $size-xl) { -webkit-box-flex: 0; -ms-flex: 0 0 31.25%; flex: 0 0 31.25%; max-width: 31.25%; margin-right: 3.125%; margin-left: 0; &:nth-child(3n){ margin-right: 0; } }
+		@media screen and (min-width: $size-xl) { -webkit-box-flex: 0; -ms-flex: 0 0 23.26%; flex: 0 0 23.26%; max-width: 23.26%; margin-right: 2.32%; margin-left: 0; &:nth-child(4n){ margin-right: 0; } }
 
-		.featured-image{ 
-			border-bottom: 1px solid #e0e0e0; 
+		.featured-image{
+			border-bottom: 1px solid #e0e0e0;
 			a{
 				display:block;
 				img{ margin: 0 auto; }
@@ -185,31 +185,31 @@
 			}
 		} /*featured-image*/
 
-		.article-title{ 
+		.article-title{
 			display: block;
 			padding: 0 0.75em;
 			margin: 0.5em 0;
 
-			a{ 
+			a{
 				font-size: 1.15em;
 				font-weight: 700;
-				color: $color_link_black; 
-				text-decoration: none; 
+				color: $color_link_black;
+				text-decoration: none;
 				&:hover{ text-decoration: underline; }
 			}
 		} /*article-text*/
 
-		.article-text{ 
+		.article-text{
 			display: block;
 			padding: 0 0.75em;
 			margin-bottom: 0.5em;
 			overflow: hidden;
 
-			a{ 
+			a{
 				display: inline-block;
 				font-size: 0.9em;
-				color: $color_link_gray; 
-				text-decoration: none; 
+				color: $color_link_gray;
+				text-decoration: none;
 				&:hover{ text-decoration: underline; }
 			}
 		} /*article-text*/

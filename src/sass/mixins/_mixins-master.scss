@@ -32,6 +32,26 @@
 }
 
 
+@mixin centerX(){
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+@mixin centerY(){
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+@mixin centerXY(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 @mixin box-shadow( $X, $Y, $F) {
   box-shadow: $X $Y $F rgba(100, 100, 100, .6);
 }

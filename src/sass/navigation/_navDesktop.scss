@@ -1,0 +1,138 @@
+.social-list li a[href*="facebook.com"]::before { content: '\f082' !important; }
+.social-list li a[href*="twitter.com"]::before { content: '\f099' !important; }
+.social-list li a[href*="dribbble.com"]::before { content: '\f17d' !important; }
+.social-list li a[href*="plus.google.com"]::before { content: '\f0d5' !important; }
+.social-list li a[href*="pinterest.com"]::before { content: '\f0d2' !important; }
+.social-list li a[href*="github.com"]::before { content: '\f09b' !important; }
+.social-list li a[href*="tumblr.com"]::before { content: '\f173' !important; }
+.social-list li a[href*="youtube.com"]::before { content: '\f167' !important; }
+.social-list li a[href*="flickr.com"]::before { content: '\f16e' !important; }
+.social-list li a[href*="vimeo.com"]::before { content: '\f194' !important; }
+.social-list li a[href*="instagram.com"]::before { content: '\f16d' !important; }
+.social-list li a[href*="linkedin.com"]::before { content: '\f0e1' !important; }
+
+
+
+#main-nav{
+
+    #desktop-main{
+        display: none;
+
+        @media screen and (min-width: $size-lg){ display: block; }//@media screen
+
+        #desktop-pre{
+            background-color: #000;
+
+            .desktop-pre-wrapper{
+                @include display_nav_desktop();
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+
+                ul.social-list{
+
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                        display: inline-block;
+
+                        a{
+                            font-size: 1.35em;
+                            padding: 0.25em 0.5em;
+                            color: #fff;
+                            text-decoration: none;
+                            &:before{ font-family: $font-awesome; }
+                            &:hover{ color: $blue1; }
+                        }//a
+                    }//li
+                }//ul.social-list
+            }//.desktop-pre-wrapper
+        }//#desktop-pre
+
+        #desktop-menu{
+            background-color: $nav__background;
+
+            .desktop-menu-wrapper{
+                @include display_nav_desktop();
+                display: flex;
+                align-items: center;
+
+                .desktop-logo{
+                    flex: 0 0 20%;
+
+                    .logo{
+                        display: flex;
+                        align-items: center;
+                    }//logo
+                }//.desktop-logo
+
+                .desktop-list{
+                    flex: 0 1 80%;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                      display: block;
+                      position: relative;
+                      height: 100%;
+
+                        a{
+                          display: block;
+                          padding: 1em;
+                          width: 100%;
+                          height: 100%;
+                          color: #fff;
+                          text-decoration: none;
+                          &:hover{ color: $blue1; }
+
+
+                        }//a
+
+                        &.menu-item-has-children a,
+                        &.page-item-has-children a{
+                          margin-right: 2em;
+                        }
+
+                        .dropdown-toggle{
+                          @include centerY();
+                          display: block;
+                          position: absolute;
+                          font-size: 1.4em;
+                          padding: 0.25em 0.5em;
+                          right: 0;
+                          font-family: $font-awesome;
+                          color: #fff;
+                          background-color: transparent;
+                          border: 1px solid #eee;
+
+                          &:hover{
+                            background-color: $blue1;
+                          }
+
+                          &:before{
+                            content: '\f0d7';
+                          }
+                        }//.dropdown-toggle
+
+                        .sub-menu{
+                          display: none;
+                          position: absolute;
+                          margin: 0;
+                          padding: 0;
+                          background-color: $darkblue2;
+                          z-index: 9999;
+                        }
+                    }//li
+                }//.desktop-list
+            }//.desktop-menu-wrapper
+        }//#desktop-menu
+
+
+    }//#desktop-main
+
+} //#main-nav

@@ -4,11 +4,11 @@
 	font-size: 0.9em;
 	background-color: #fff;
 
-	@media screen and (min-width: $mobile-width) {
+	@media screen and (min-width: $size-md) {
 		font-size: 0.9em;
 	}
 
-	@media screen and (min-width: $tablet-width){
+	@media screen and (min-width: $size-lg){
 	    max-width: 50rem;
 	    padding: 1em 1.5em;
 	    @include box-shadow(.5px, .5px, 2px);
@@ -46,7 +46,7 @@
 		margin-left: 60px;
 		font-style: italic;
 
-		@media screen and (min-width: $mobile-width) {
+		@media screen and (min-width: $size-md) {
 			margin-left: 90px;
 		}
 
@@ -57,7 +57,7 @@
 			a{
 				color: $comment-meta-color;
 			}
-			
+
 		}
 
 		.says {
@@ -102,17 +102,17 @@
 	margin-left: 1em;
 	padding-left: 0;
 
-	@media screen and (min-width: $mobile-width) {
+	@media screen and (min-width: $size-md) {
 		margin-left: 3em;
 	}
 }
 
 .comment-content {
-	@media screen and (min-width: $mobile-width) {
+	@media screen and (min-width: $size-md) {
 		margin-left: 45px;
 	}
 
-	@media screen and (min-width: $tablet-width) {
+	@media screen and (min-width: $size-lg) {
 		margin-left: 90px;
 	}
 }
@@ -140,5 +140,3 @@
 		}
 	}
 }
-
-

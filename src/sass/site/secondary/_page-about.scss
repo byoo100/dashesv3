@@ -7,10 +7,10 @@
 		.row{
 			@include clearfix();
 			@include container(1000px);
-			
+
 			#text-main{
 				@include span(12 of 12 0);
-				@media screen and (min-width: $mobile-width){ @include span(4 of 10 0); }
+				@media screen and (min-width: $size-md){ @include span(4 of 10 0); }
 				h1{ font-size: 4em; letter-spacing: -3px; margin: 0 0 0.2em; padding: 0; line-height: 1.2em; }
 				p{ margin: 0 0 1em; padding: 0; }
 				.intro{
@@ -23,7 +23,7 @@
 			}
 			#img-main{
 				@include span(12 of 12 0);
-				@media screen and (min-width: $mobile-width){ @include span(6 of 10 0); }
+				@media screen and (min-width: $size-md){ @include span(6 of 10 0); }
 			}
 		} //.row
 	} //#about-main
@@ -44,13 +44,13 @@
 				@include span(12);
 				font-size: 2em;
 				margin: 0 0 0.5em;
-				@media screen and (min-width: $mobile-width){ @include span(4.8 last); }
+				@media screen and (min-width: $size-md){ @include span(4.8 last); }
 			}
 
 			#text-site{
 				@include span(12);
 				color: $gray3;
-				@media screen and (min-width: $mobile-width){ @include span(4.8 last); }
+				@media screen and (min-width: $size-md){ @include span(4.8 last); }
 				p { margin: 0 0 1em; }
 			}
 
@@ -61,11 +61,11 @@
 				list-style: none;
 				overflow: auto;
 
-				@media screen and (min-width: $mobile-width){ @include span(7.2 no-gutters); }
+				@media screen and (min-width: $size-md){ @include span(7.2 no-gutters); }
 
 				li{
 					@include span(4 of 12 0);
-					@media screen and (min-width: $tablet-width){ @include span(3 of 12 0); }
+					@media screen and (min-width: $size-lg){ @include span(3 of 12 0); }
 					margin-bottom: 1em;
 
 					.icon{
@@ -73,7 +73,7 @@
 						margin: 0 auto 0.5em;
 
 						@include about-icons(300px, 375px);
-						@media screen and (min-width: $tablet-width){ @include about-icons(400px, 500px); }
+						@media screen and (min-width: $size-lg){ @include about-icons(400px, 500px); }
 					} //icon
 
 					p{
@@ -95,12 +95,12 @@
 		.row{
 			@include clearfix();
 			@include container(1100px);
-			@media screen and (min-width: $mobile-width){ display: flex; }
+			@media screen and (min-width: $size-md){ display: flex; }
 
 			.left{
 				@include span(10 of 10 split);
 				text-align: center;
-				@media screen and (min-width: $mobile-width){ @include span(5 of 10); }
+				@media screen and (min-width: $size-md){ @include span(5 of 10); }
 
 				.title-programs{
 					font-size: 2em;
@@ -118,7 +118,7 @@
 					li.icon{
 						display: inline-block;
 						@include programs-icons(150px);
-					} 	
+					}
 				}
 			}
 
@@ -127,7 +127,7 @@
 				flex-direction: column;
 				justify-content: center;
 				@include span(10 of 10 0);
-				@media screen and (min-width: $mobile-width){ @include span(5 of 10 last); }
+				@media screen and (min-width: $size-md){ @include span(5 of 10 last); }
 
 				img{ margin-left: auto; }
 			}
@@ -166,11 +166,11 @@
 				border-radius: 15px;
 				box-shadow: 3px 3px 10px #000;
 				text-align: center;
-				
-				@media screen and (min-width: 700px){ 
-					@include span(4.5 of 10 0); margin-right: 
-					span(1 of 10 0); 
-					margin-bottom: 0; 
+
+				@media screen and (min-width: 700px){
+					@include span(4.5 of 10 0); margin-right:
+					span(1 of 10 0);
+					margin-bottom: 0;
 					&:last-child{ margin-right: 0; }
 				}
 
@@ -210,7 +210,3 @@
 		}
 	}
 } //page-about
-
-
-
-

@@ -8,8 +8,8 @@ textarea {
 	@include font-size(0.875);
 	line-height: $font__line-height-body;
 
-	@media screen and (min-width: $mobile-width){ @include font-size(1); }
-	@media screen and (min-width: $tablet-width){ @include font-size(1.125); }
+	@media screen and (min-width: $size-md){ @include font-size(1); }
+	@media screen and (min-width: $size-lg){ @include font-size(1.125); }
 }
 
 p {

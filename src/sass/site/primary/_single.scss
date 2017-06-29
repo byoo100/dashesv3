@@ -1,5 +1,5 @@
 .content-area{
-	
+
 	.title-banner{
 		margin-bottom: 1em;
 
@@ -51,17 +51,17 @@
 	.featured{
 		margin-bottom: 1em;
 
-		&.left{ 
-			@include span(12 no-gutters); 
-			@media screen and (min-width: $tablet-width ){ @include span(9); }
+		&.left{
+			@include span(12 no-gutters);
+			@media screen and (min-width: $size-lg ){ @include span(9); }
 		}
 
-		&.centered{ 
+		&.centered{
 			width: span(12 no-gutters);
 			margin-right: auto;
 			margin-left: auto;
 
-			@media screen and (min-width: $tablet-width ){ width: span(9); }
+			@media screen and (min-width: $size-lg ){ width: span(9); }
 		}
 	} //featured
 
@@ -70,7 +70,7 @@
 		padding-bottom: 0.5em;
 		border-bottom: 1px solid #e0e0e0;
 
-		@media screen and (min-width: $tablet-width ){ @include span(last 3); }
+		@media screen and (min-width: $size-lg ){ @include span(last 3); }
 
 		.side-content{
 			display: inline-block;
@@ -78,15 +78,15 @@
 
 			&:last-child{ margin-right: 0; }
 
-			@media screen and (min-width: $tablet-width ){ display: block; margin-right: 0; margin-bottom: 1em; }
+			@media screen and (min-width: $size-lg ){ display: block; margin-right: 0; margin-bottom: 1em; }
 
-			.side-title{ 
-				display: block; 
-				font-size: 1.25em; 
-				font-weight: 700; 
+			.side-title{
+				display: block;
+				font-size: 1.25em;
+				font-weight: 700;
 			}
-			.side-text{ 
-				display: block; 
+			.side-text{
+				display: block;
 				font-size: 0.9em;
 				overflow-y: auto;
 				p{ margin: 0; }
@@ -97,16 +97,16 @@
 	}
 
 	.post-content{
-		&.left{ 
-			@include span(12); 
-			@media screen and (min-width: $tablet-width ){ @include span(9); }
+		&.left{
+			@include span(12);
+			@media screen and (min-width: $size-lg ){ @include span(9); }
 		}
 
-		&.centered{ 
-			width: span(12 no-gutters); 
-			margin: 0 auto; 
+		&.centered{
+			width: span(12 no-gutters);
+			margin: 0 auto;
 
-			@media screen and (min-width: $tablet-width ){ width: span(9); }
+			@media screen and (min-width: $size-lg ){ width: span(9); }
 		}
 	}
 

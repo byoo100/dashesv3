@@ -1,0 +1,131 @@
+#main-nav .mobile-list li a[href*="brian-yoo.com/"]::before { content: '\f015'; }
+#main-nav .mobile-list li a[href*="brian-yoo.com/projects"]::before { content: '\f03e'; }
+#main-nav .mobile-list li a[href*="brian-yoo.com/photography"]::before { content: '\f030'; }
+#main-nav .mobile-list li a[href*="brian-yoo.com/media"]::before { content: '\f03d'; }
+#main-nav .mobile-list li a[href*="brian-yoo.com/about"]::before { content: '\f007'; }
+#main-nav .mobile-list li a[href*="brian-yoo.com/contact"]::before { content: '\f0e0'; }
+
+#main-nav{
+    #mobile-main{
+      display: block;
+      position: fixed;
+      width: 300px;
+      height: 100%;
+      left: -100%;
+      background-color: $nav__background;
+      transition: left 300ms ease-in-out;
+      z-index: 99999;
+
+      &.active{ left: 0; }
+
+      #mobile-pre{
+          display: block;
+          position: relative;
+          text-align: right;
+
+          #mobile-close{
+              display: inline-block;
+              font-size: 1.4em;
+              padding: 0.25em 0.5em;
+              font-family: $font-awesome;
+              color: #fff;
+              background-color: transparent;
+              border: none;
+
+              &:before{
+                content: '\f00d';
+              }
+          }//#mobile-close
+      }//#mobile-pre
+
+      #mobile-menu{
+        display: block;
+        position: relative;
+
+        .mobile-logo{
+            display: block;
+            position: relative;
+            margin: 0 auto 1.25em;
+
+            .logo{
+                display: block;
+                width: 160px;
+                margin: 0 auto;
+            }//.logo
+        }//.mobile-logo
+
+        ul.mobile-list{
+            display: block;
+            margin: 0 0 1.5em;
+            padding: 0;
+            list-style: none;
+
+            li{
+                a{
+                    display: block;
+                    font-size: 1.25em;
+                    padding: 0.5em;
+                    color: #fff;
+                    text-decoration: none;
+                    text-align: center;
+
+                    &:hover{ background-color: $green3; }
+                }//a
+            }//li
+        }//.mobile-list
+
+        ul.social-list{
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            list-style: none;
+
+            li{
+                display: inline-block;
+
+                a{
+                    font-size: 1.5em;
+                    margin-right: 0.25em;
+                    color: #fff;
+                    text-decoration: none;
+                    &:before{ font-family: $font-awesome; }
+                    &:hover{ color: $blue1; }
+                }//a
+            }//li
+        }//ul.social-list
+
+      }//#mobile-menu
+
+    }//#mobile-main
+
+    #mobile-open{
+        display: block;
+        position: absolute;
+        font-family: $font-awesome;
+        font-size: 1.6em;
+        top: 1em;
+        right: 1em;
+        padding: 0.25em 0.5em;
+        color: #fff;
+        background-color: rgba(28, 52, 76, 0.5);
+        border: none;
+        z-index: 9999;
+        &:before{ content: '\f0c9'; }
+        &:hover{ background-color: #fff; color: rgba(28, 52, 76, 1); }
+        @media screen and (min-width: $size-lg){ display: none; }//@media screen
+
+    }//#mobile-open
+
+    #dark-overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.25);
+
+        &.active{ display: block; }
+        @media screen and (min-width: $size-lg){ display: none; }//@media screen
+    }//#dark-overlay
+
+}//#main-nav

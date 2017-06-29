@@ -24,11 +24,46 @@ $desktop-cutoff: 75em; //1200px
 
 
 
-$mobile-width: 37.5rem; //600px
-$tablet-width: 62.5rem; //1000px
-$desktop-width: 87.5rem; //1400px
+//$mobile-width: 37.5rem; //600px
+//$tablet-width: 62.5rem; //1000px
+//$desktop-width: 87.5rem; //1400px
 
-$container-small: 400px;
-$container-medium: 630px;
-$container-large: 960px;
-$container-xlarge: 1290px;
+//$container-small: 400px;
+//$container-medium: 630px;
+//$container-large: 960px;
+//$container-xlarge: 1290px;
+
+
+
+
+//Window Size
+$size-sm: 300px;
+$size-md: 600px;
+$size-lg: 1000px;
+$size-xl: 1400px;
+$size-xxl: 1700px;
+
+//Container Size for PAGES
+$page-sm: 400px;
+$page-md: 630px;
+$page-lg: 960px;
+$page-xl: 1290px;
+
+
+$nav-lg: 900px;
+$nav-xl: 1300px;
+$nav-xxl: 1600px;
+
+
+
+
+
+$mobile-mainSize: 4em;
+$nav-mainSize: 6em;
+$nav-preSize: 2.8125em;
+
+@mixin display_nav_desktop(){
+  @media screen and (min-width: $size-lg){ @include container($nav-lg); }
+  @media screen and (min-width: $size-xl){ @include container($nav-xl); }
+  @media screen and (min-width: $size-xxl){ @include container($nav-xxl); }
+}

@@ -5,7 +5,6 @@
 #site-navigation .mobile-list li a[href*="brian-yoo.com/about"]::before { content: '\f007'; }
 #site-navigation .mobile-list li a[href*="brian-yoo.com/contact"]::before { content: '\f0e0'; }
 
-
 #social-list li a[href*="facebook.com"]::before { content: '\f082' !important; }
 #social-list li a[href*="twitter.com"]::before { content: '\f099' !important; }
 #social-list li a[href*="dribbble.com"]::before { content: '\f17d' !important; }
@@ -33,8 +32,8 @@
 	height: $mobileHeight;
 	background-color: $nav__background;
 	z-index:9999;
-	@media screen and (min-width: $mobile-width){ height: $tabletHeight; }
-	@media screen and (min-width: $tablet-width){ height: $desktopHeight; @include outline-color(); }
+	@media screen and (min-width: $size-md){ height: $tabletHeight; }
+	@media screen and (min-width: $size-lg){ height: $desktopHeight; @include outline-color(); }
 
 
 	//GENERAL STYLE OF MENU
@@ -45,7 +44,7 @@
 		list-style: none;
 
 		li{
-			position: relative; 
+			position: relative;
 
 			a{
 				display: block;
@@ -143,14 +142,14 @@
 						font-family: 'fontawesome';
 						content: '';
 						font-size: 1.75em;
-						
+
 					}
 				}
 			} //list-style
-			@media screen and (min-width: $tablet-width){ margin-left: 1em; }
+			@media screen and (min-width: $size-lg){ margin-left: 1em; }
 		} //ul
 	} //social-list
-	
+
 
 	// MOBILE MENU BAR
 	.mobile-menubar{
@@ -164,7 +163,7 @@
 		background-color: $nav__background;
 		@include outline-color();
 
-		@media screen and (min-width: $mobile-width){ height: $tabletHeight; }
+		@media screen and (min-width: $size-md){ height: $tabletHeight; }
 
 		// OPEN BUTTON
 		.mobile-btn-open{
@@ -190,7 +189,7 @@
 				vertical-align: middle;
 			}
 
-			@media screen and (min-width: $mobile-width){
+			@media screen and (min-width: $size-md){
 				width: $tabletWidth;
 				height: $tabletHeight;
 
@@ -214,7 +213,7 @@
 			margin: 0 auto;
 			padding: 0.4em 0;
 			width: 5em;
-			@media screen and (min-width: $mobile-width){ width: 6.5em; }
+			@media screen and (min-width: $size-md){ width: 6.5em; }
 		}
 
 	} //nav-mobile-menubar
@@ -312,8 +311,8 @@
 					.dropdown-toggle{ right: 1.5em; }
 
 					ul.sub-menu{
-						li{ 
-							a{ 
+						li{
+							a{
 								padding-left: 3.5em;
 							}
 						}
@@ -351,7 +350,7 @@
 
 	//==============================================================
 
-	
+
 	// DESKTOP MENU BAR
 	.desktop-menubar{
 		@include clearfix();
@@ -364,7 +363,7 @@
 		.desktop-logo{
 			flex: 0 0 20%;
 			padding: 0.8em 0;
-			
+
 			a{
 				display: inline-block;
 				position: relative;
@@ -408,7 +407,7 @@
 			#social-list{
 
 				a{ line-height: $desktopHeight; }
-				
+
 			} //social-content
 		} //grid-container
 	} //nav-desktop-menubar
@@ -416,7 +415,7 @@
 
 
 
-	@media screen and (min-width: $tablet-width){
+	@media screen and (min-width: $size-lg){
 		.mobile-menubar{
 			display: none;
 		}
@@ -426,6 +425,3 @@
 		}
 	}
 } //main-navigation
-
-
-
