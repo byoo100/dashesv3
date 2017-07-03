@@ -19,7 +19,7 @@
 
         <main id="mobile-menu">
             <div class="mobile-logo">
-              <object type="image/svg+xml" class="logo" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
+              <object type="image/svg+xml" class="logo" data="<?php echo get_template_directory_uri(); ?>/dist/img/brianyoo.svg"></object>
             </div><!-- .mobile-logo -->
 
             <?php wp_nav_menu( array(
@@ -63,7 +63,7 @@
 
               <div class="desktop-menu-wrapper">
                   <div class="desktop-logo">
-                      <object type="image/svg+xml" class="logo" style="max-width:100px; max-height:100px;" data="<?php echo get_template_directory_uri(); ?>/src/images/brian-logo-optimised.svg"></object>
+                      <object type="image/svg+xml" class="logo" style="max-width:100px; max-height:100px;" data="<?php echo get_template_directory_uri(); ?>/dist/img/brianyoo.svg"></object>
                   </div>
 
                   <?php wp_nav_menu( array(
